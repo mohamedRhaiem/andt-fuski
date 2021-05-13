@@ -1,5 +1,5 @@
-export * from "./components/FieldRangeDate";
+export * from "./components/form/fields/FuskiFieldRangeDate";
 
-export * from "./components/FieldTimeInputOnSave";
+export * from "./components/form/fields/FuskiFieldTimeInputOnSave";
 
-export * from "./components/utils/field";
+export * from "./components/form/utils/field";

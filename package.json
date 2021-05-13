@@ -26,7 +26,7 @@
     "lint-staged": "lint-staged",
     "lint-staged:js": "eslint --ext .js,.jsx,.ts,.tsx ",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx --quiet",
-    "lint:fix": "eslint --fix --cache --ext --quiet .js,.jsx,.ts,.tsx --format=pretty ./src && npm run lint:style",
+    "lint:fix": "eslint --fix --cache --quiet --ext .js,.jsx,.ts,.tsx --format=pretty ./src && npm run lint:style",
     "lint:style": "stylelint --fix \"src/**/*.less\" \"assets/**/*.less\" --syntax less",
     "test": "jest"
   },
@@ -47,18 +47,21 @@
     "@rollup/plugin-commonjs": "^17.1.0",
     "@rollup/plugin-node-resolve": "^11.2.0",
     "@storybook/addon-actions": "^6.1.21",
-    "@storybook/addon-essentials": "^6.1.21",
+    "@storybook/addon-essentials": "^6.2.9",
     "@storybook/addon-links": "^6.1.21",
-    "@storybook/react": "^6.1.21",
+    "@storybook/react": "^6.2.9",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@types/jest": "^26.0.21",
+    "@types/lodash": "^4.14.169",
     "@types/node": "^14.14.35",
     "@types/testing-library__react": "^10.2.0",
+    "@typescript-eslint/parser": "^4.23.0",
     "antd": "^4.9.1",
     "babel-loader": "^8.2.2",
     "eslint": "^7.22.0",
     "eslint-config-prettier": "^8.1.0",
+    "eslint-formatter-pretty": "^4.0.0",
     "eslint-plugin-jest": "^24.3.2",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react": "^7.22.0",
@@ -67,6 +70,7 @@
     "less": "^2.7.3",
     "less-loader": "^4.1.0",
     "lint-staged": "^10.5.4",
+    "lodash": "^4.17.21",
     "mini-css-extract-plugin": "^1.4.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -76,11 +80,13 @@
     "stylelint": "^13.12.0",
     "stylelint-config-recommended": "^4.0.0",
     "ts-jest": "^26.5.4",
-    "typescript": "^4.2.3"
+    "typescript": "^4.2.3",
+    "uuidv4": "^6.2.8"
   },
   "peerDependencies": {
     "antd": "^4.9.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
-  }
+  },
+  "dependencies": {}
 }

@@ -1,11 +1,11 @@
 import React from "react";
 import Form from "antd/es/form";
 import { DatePicker } from "antd";
-import { FieldConfigSimple } from "../utils/field";
+import { FieldConfigSimple } from "../../utils/field";
 
 const { RangePicker } = DatePicker;
 
-const FieldRangeDate: React.FunctionComponent<FieldConfigSimple> = ({
+const FuskiFieldRangeDate: React.FunctionComponent<FieldConfigSimple> = ({
   key,
   required,
   label,
@@ -19,4 +19,4 @@ const FieldRangeDate: React.FunctionComponent<FieldConfigSimple> = ({
   );
 };
 
-export default FieldRangeDate;
+export default FuskiFieldRangeDate;

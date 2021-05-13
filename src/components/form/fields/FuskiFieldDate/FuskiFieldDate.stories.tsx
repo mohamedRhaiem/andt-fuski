@@ -1,28 +1,29 @@
 import React from "react";
 import { Meta, Story } from "@storybook/react";
-
-import FieldRangeDate from "./FieldRangeDate";
-import { FieldConfigSimple } from "../utils/field";
+import { FieldConfigWithDateFormat } from "../../utils/field";
+import FieldDate from "./FuskiFieldDate";
 
 export default {
-  title: "FormFields/FieldRangeDate",
-  component: FieldRangeDate,
+  title: "Form/Fields/FuskiFieldDate",
+  component: FieldDate,
 } as Meta;
 
-const Template: Story<FieldConfigSimple> = (args) => (
-  <FieldRangeDate {...args} />
+const Template: Story<FieldConfigWithDateFormat> = (args) => (
+  <FieldDate {...args} />
 );
 
 export const Default = Template.bind({});
 Default.args = {
-  key: "rangeDate",
+  key: "date",
+  style: { width: "30%" },
 };
 
 export const Custom = Template.bind({});
 Custom.args = {
   ...Default.args,
   required: true,
-  label: "Range Date",
+  label: "Date",
   style: { backgroundColor: "#09aaa3", width: "50%" },
   border: true,
+  format:'DD-MM-YYYY'
 };

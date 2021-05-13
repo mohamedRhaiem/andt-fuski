@@ -1,27 +1,27 @@
 import React from "react";
 import Form from "antd/es/form";
-import { FieldConfigSimpleWithAction } from "../utils/field";
 import { Input } from "antd";
+import { FieldConfigSimpleWithAction } from "../../utils/field";
 
-const FieldTimeInputOnSave = ({
+const FuskiFieldTimeInputOnSave = ({
   key,
   required,
   style,
   border,
   label,
-  save,
+  onChange,
 }: FieldConfigSimpleWithAction) => {
   return (
     <Form.Item label={label} style={style} name={key} rules={[{ required }]}>
       <Input
         type="time"
         step="1"
-        onPressEnter={save}
-        onBlur={save}
+        onPressEnter={onChange}
+        onBlur={onChange}
         bordered={border}
       />
     </Form.Item>
   );
 };
 
-export default FieldTimeInputOnSave;
+export default FuskiFieldTimeInputOnSave;
