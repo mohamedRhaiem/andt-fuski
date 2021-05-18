@@ -28,7 +28,7 @@ build_dev:
     paths:
       - storybook-static/
   only:
-    - develop
+    - master
 
 # Deploy para o ambiente de desenvolvimento
 deploy_dev:
@@ -46,5 +46,5 @@ deploy_dev:
   dependencies: 
     - build_dev
   only:
-    - develop
+    - master
 
