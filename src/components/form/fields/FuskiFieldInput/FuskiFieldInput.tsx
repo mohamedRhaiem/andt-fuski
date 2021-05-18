@@ -1,15 +1,15 @@
 import React from "react";
 import Form from "antd/es/form";
 import { Input } from "antd";
-import { FieldConfigSimple } from "../../utils/field";
+import { FieldConfigForm } from "../../utils/field";
 
-const FuskiFieldInput: React.FunctionComponent<FieldConfigSimple> = ({
+const FuskiFieldInput: React.FunctionComponent<FieldConfigForm> = ({
   key,
   required,
   label,
   style,
   border,
-}: FieldConfigSimple) => {
+}: FieldConfigForm) => {
   return (
     <Form.Item name={key} rules={[{ required }]} label={label}>
       <Input style={style} bordered={border} />

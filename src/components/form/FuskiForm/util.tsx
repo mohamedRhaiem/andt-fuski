@@ -16,5 +16,5 @@ export const listFormFields = {
 
 export const buildField = (field: any, i: number) => {
   const Component = listFormFields[field.component];
-  return <Component key={i} field={field} />;
+  return <Component key={i} {...field} />;
 };

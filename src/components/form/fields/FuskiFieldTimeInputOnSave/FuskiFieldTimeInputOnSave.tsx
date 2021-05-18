@@ -1,7 +1,7 @@
 import React from "react";
 import Form from "antd/es/form";
 import { Input } from "antd";
-import { FieldConfigSimpleWithAction } from "../../utils/field";
+import { FieldConfigForm } from "../../utils/field";
 
 const FuskiFieldTimeInputOnSave = ({
   key,
@@ -10,7 +10,7 @@ const FuskiFieldTimeInputOnSave = ({
   border,
   label,
   onChange,
-}: FieldConfigSimpleWithAction) => {
+}: FieldConfigForm) => {
   return (
     <Form.Item label={label} style={style} name={key} rules={[{ required }]}>
       <Input

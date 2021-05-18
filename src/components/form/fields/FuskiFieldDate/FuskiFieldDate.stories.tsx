@@ -1,6 +1,6 @@
 import React from "react";
 import { Meta, Story } from "@storybook/react";
-import { FieldConfigWithDateFormat } from "../../utils/field";
+import { FieldConfigForm } from "../../utils/field";
 import FieldDate from "./FuskiFieldDate";
 
 export default {
@@ -8,22 +8,30 @@ export default {
   component: FieldDate,
 } as Meta;
 
-const Template: Story<FieldConfigWithDateFormat> = (args) => (
-  <FieldDate {...args} />
-);
+const Template: Story<FieldConfigForm> = (args) => <FieldDate {...args} />;
 
-export const Default = Template.bind({});
-Default.args = {
+export const DateSimple = Template.bind({});
+DateSimple.args = {
   key: "date",
   style: { width: "30%" },
 };
 
-export const Custom = Template.bind({});
-Custom.args = {
-  ...Default.args,
+export const DateCustom = Template.bind({});
+DateCustom.args = {
+  ...DateSimple.args,
   required: true,
   label: "Date",
-  style: { backgroundColor: "#09aaa3", width: "50%" },
+  style: { backgroundColor: "red", width: "50%" },
   border: true,
-  format:'DD-MM-YYYY'
+  format: "DD-MM-YYYY",
+};
+
+export const DateTimeCustom = Template.bind({});
+DateTimeCustom.args = {
+  ...DateSimple.args,
+  required: true,
+  label: "Date",
+  style: { backgroundColor: "green", width: "50%" },
+  border: true,
+  format: "DD-MM-YYYY HH-mm-ss",
 };

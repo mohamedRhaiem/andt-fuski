@@ -1,14 +1,14 @@
 import React from "react";
 import { Meta, Story } from "@storybook/react";
 import FuskiFieldDateTime from "./FuskiFieldDateTime";
-import { FieldConfigWithDateFormat } from "../../utils/field";
+import { FieldConfigForm } from "../../utils/field";
 
 export default {
   title: "Form/Fields/FuskiFieldDateTime",
   component: FuskiFieldDateTime,
 } as Meta;
 
-const Template: Story<FieldConfigWithDateFormat> = (args) => (
+const Template: Story<FieldConfigForm> = (args) => (
   <FuskiFieldDateTime {...args} />
 );
 
@@ -25,5 +25,5 @@ Custom.args = {
   label: "Date Time",
   style: { backgroundColor: "#09aaa3", width: "50%" },
   border: true,
-  format:'DD-MM-yyyy HH:mm:ss'
+  format: "DD-MM-yyyy HH:mm:ss",
 };

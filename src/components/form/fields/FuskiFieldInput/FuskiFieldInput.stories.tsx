@@ -2,14 +2,14 @@ import React from "react";
 import { Meta, Story } from "@storybook/react";
 import FieldDate from "./FuskiFieldInput";
 import FuskiFieldInput from "./FuskiFieldInput";
-import { FieldConfigSimple } from "../../utils/field";
+import { FieldConfigForm } from "../../utils/field";
 
 export default {
   title: "Form/Fields/FuskiFieldInput",
   component: FuskiFieldInput,
 } as Meta;
 
-const Template: Story<FieldConfigSimple> = (args) => <FieldDate {...args} />;
+const Template: Story<FieldConfigForm> = (args) => <FieldDate {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

@@ -1,15 +1,15 @@
 import { Meta, Story } from "@storybook/react";
 import React from "react";
 import FuskiFieldTimeInputOnSave from "./FuskiFieldTimeInputOnSave";
-import { FieldConfigSimpleWithAction } from "../../utils/field";
+import { FieldConfigForm } from "../../utils/field";
 
 export default {
   title: "Form/Fields/FuskiFieldTimeInputOnSave",
   component: FuskiFieldTimeInputOnSave,
-  argTypes: { onChange: { action: 'clicked' } },
+  argTypes: { onChange: { action: "clicked" } },
 } as Meta;
 
-const Template: Story<FieldConfigSimpleWithAction> = (args) => (
+const Template: Story<FieldConfigForm> = (args) => (
   <FuskiFieldTimeInputOnSave {...args} />
 );
 
@@ -27,5 +27,3 @@ Custom.args = {
   border: true,
   style: { width: "30%" },
 };
-
-

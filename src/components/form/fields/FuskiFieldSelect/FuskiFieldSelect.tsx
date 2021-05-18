@@ -2,9 +2,9 @@ import React from "react";
 import Form from "antd/es/form";
 import { Select } from "antd";
 import { v4 as uuidv4 } from "uuid";
-import { FieldConfigWithSelect } from "../../utils/field";
+import { FieldConfigForm } from "../../utils/field";
 
-const FuskiFieldSelect: React.FunctionComponent<FieldConfigWithSelect> = ({
+const FuskiFieldSelect: React.FunctionComponent<FieldConfigForm> = ({
   key,
   required,
   label,
@@ -18,7 +18,7 @@ const FuskiFieldSelect: React.FunctionComponent<FieldConfigWithSelect> = ({
   mode,
   loading,
   onChange,
-}: FieldConfigWithSelect) => {
+}: FieldConfigForm) => {
   console.log(options);
   const buildSelect = () => {
     if (Array.isArray(options)) {
