@@ -1,0 +1,169 @@
+@import '~antd/dist/antd.less';
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.colorWeak {
+  filter: invert(80%);
+}
+
+.ant-layout {
+  min-height: 100vh;
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+@media (max-width: @screen-xs) {
+  .ant-table {
+    width: 100%;
+    overflow-x: auto;
+    &-thead > tr,
+    &-tbody > tr {
+      > th,
+      > td {
+        white-space: pre;
+        > span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+// 兼容IE11
+@media screen and(-ms-high-contrast: active), (-ms-high-contrast: none) {
+  body .ant-design-pro > .ant-layout {
+    min-height: 100vh;
+  }
+}
+
+// FORMATAÇÃO DA APLICAÇÃO
+// Variáveis
+@app-color-primary: #2c65d6;
+
+// APP BAR
+.ant-pro-top-nav-header {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.ant-pro-top-nav-header-logo h1 {
+  margin: 0 10px 0 6px;
+  color: @app-color-primary !important;
+  font-weight: 700;
+  font-size: 1.2em;
+  letter-spacing: -0.5px;
+}
+.ant-pro-top-nav-header-logo img {
+  height: 24px;
+}
+
+// PAGE HEADER
+.ant-breadcrumb {
+  font-size: 0.9em;
+}
+.ant-breadcrumb + .ant-page-header-heading {
+  margin-top: 0;
+  padding-bottom: 24px;
+}
+.ant-breadcrumb a,
+.ant-breadcrumb-link {
+  color: @app-color-primary;
+  text-transform: lowercase;
+}
+.ant-breadcrumb-separator {
+  margin: 0 3px;
+}
+
+.ant-page-header-heading-left,
+.ant-page-header-heading-extra {
+  margin: 0;
+}
+
+.ant-page-header-back {
+  margin-right: 6px;
+}
+
+.ant-page-header-heading-title {
+  text-transform: uppercase;
+}
+
+.ant-pro-page-header-wrap-content .ant-picker,
+.ant-pro-page-header-wrap-content .ant-select-selector {
+  background-color: transparent !important;
+}
+
+.ant-pro-page-header-wrap-content .ant-form-item {
+  margin-right: 8px !important;
+}
+
+//MODAL E DRAWER
+.ant-modal-title,
+.ant-drawer-title {
+  font-weight: 700 !important;
+  font-size: 1.4em !important;
+}
+.ant-modal-header,
+.ant-modal-content,
+.ant-modal-footer {
+  border-radius: 0 !important;
+}
+.ant-modal-close-x .anticon,
+.ant-drawer-close .anticon {
+  color: @app-color-primary;
+}
+
+//FORM
+.ant-form-item-label {
+  padding-bottom: 4px !important;
+}
+.ant-form-item-label label {
+  font-weight: 700 !important;
+  font-size: 0.95em !important;
+}
+
+//DATA TABLE
+.ant-table-thead span,
+.ant-table-thead th.ant-table-cell {
+  font-weight: 700 !important;
+  font-size: 0.95em !important;
+}
+.ant-table-pagination.ant-pagination {
+  margin: 10px 6px 6px !important;
+}
+.ant-table-tbody > tr > td {
+  border-bottom: 1px solid #ddd !important;
+}
+
+//COMPONENTES
+.ant-tag {
+  border-radius: 3px !important;
+}
+
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  font-weight: 700 !important;
+}
+
+.ant-anchor-wrapper {
+  background-color: transparent !important;
+  border-width: 0 !important;
+}
+
+.ant-anchor {
+  padding-left: 0 !important;
+  background-color: transparent !important;
+}

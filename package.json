@@ -20,13 +20,30 @@
     "storybook"
   ],
   "scripts": {
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 6006 --no-manager-cache",
     "build-storybook": "build-storybook",
     "build": "rollup -c",
-    "lint": "eslint 'src/**/*.{js,ts,tsx}' --quiet --fix",
+    "lint-staged": "lint-staged",
+    "lint-staged:js": "eslint --ext .js,.jsx,.ts,.tsx ",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx --quiet",
+    "lint:fix": "eslint --fix --cache --quiet --ext .js,.jsx,.ts,.tsx --format=pretty ./src && npm run lint:style",
+    "lint:style": "stylelint --fix \"src/**/*.less\" \"assets/**/*.less\" --syntax less",
     "test": "jest"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.less": "stylelint --syntax less",
+    "**/*.{js,jsx,ts,tsx}": "npm run lint-staged:js",
+    "**/*.{js,jsx,tsx,ts,less,md,json}": [
+      "prettier --write"
+    ]
+  },
   "devDependencies": {
+    "@ant-design/icons": "^4.6.2",
     "@babel/core": "^7.13.10",
     "@rollup/plugin-commonjs": "^17.1.0",
     "@rollup/plugin-node-resolve": "^11.2.0",
@@ -37,30 +54,40 @@
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@types/jest": "^26.0.21",
+    "@types/lodash": "^4.14.169",
     "@types/node": "^14.14.35",
     "@types/testing-library__react": "^10.2.0",
-    "@typescript-eslint/eslint-plugin": "^4.18.0",
-    "@typescript-eslint/parser": "^4.18.0",
+    "@typescript-eslint/parser": "^4.23.0",
     "antd": "^4.9.1",
     "babel-loader": "^8.2.2",
     "eslint": "^7.22.0",
     "eslint-config-prettier": "^8.1.0",
+    "eslint-formatter-pretty": "^4.0.0",
     "eslint-plugin-jest": "^24.3.2",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react": "^7.22.0",
     "fork-ts-checker-webpack-plugin": "^4.1.6",
     "jest": "^26.6.3",
+    "less": "^2.7.3",
+    "less-loader": "^4.1.0",
+    "lint-staged": "^10.5.4",
+    "lodash": "^4.17.21",
+    "mini-css-extract-plugin": "^1.4.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.0",
     "rollup-plugin-typescript2": "^0.30.0",
+    "stylelint": "^13.12.0",
+    "stylelint-config-recommended": "^4.0.0",
     "ts-jest": "^26.5.4",
-    "typescript": "^4.2.3"
+    "typescript": "^4.2.3",
+    "uuidv4": "^6.2.8"
   },
   "peerDependencies": {
     "antd": "^4.9.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
-  }
+  },
+  "dependencies": {}
 }
