@@ -3,8 +3,8 @@ import { SendOutlined } from "@ant-design/icons";
 import { message, Space, Tag, Tooltip } from "antd";
 import moment from "moment";
 import React from "react";
-import Date from "../columns/Date";
-import Group from "../columns/Group";
+import Date from "../columns/Date/Date";
+import Group from "../columns/Group/Group";
 import { ConfigTable } from "../utils/configTable";
 
 export const StatusChecking = {
