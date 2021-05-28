@@ -4,7 +4,7 @@ import { DatePicker } from "antd";
 import { FieldConfigForm } from "../../utils/field";
 
 const FieldDate: React.FunctionComponent<FieldConfigForm> = ({
-  key,
+  name,
   required,
   label,
   style,
@@ -12,7 +12,7 @@ const FieldDate: React.FunctionComponent<FieldConfigForm> = ({
   format,
 }: FieldConfigForm) => {
   return (
-    <Form.Item name={key} rules={[{ required: required }]} label={label}>
+    <Form.Item name={name} rules={[{ required: required }]} label={label}>
       <DatePicker format={format} style={style} bordered={border} />
     </Form.Item>
   );

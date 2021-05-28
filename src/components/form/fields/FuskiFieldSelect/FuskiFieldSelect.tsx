@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from "uuid";
 import { FieldConfigForm } from "../../utils/field";
 
 const FuskiFieldSelect: React.FunctionComponent<FieldConfigForm> = ({
-  key,
+  name,
   required,
   label,
   style,
@@ -19,7 +19,7 @@ const FuskiFieldSelect: React.FunctionComponent<FieldConfigForm> = ({
   loading,
   onChange,
 }: FieldConfigForm) => {
-  console.log(options);
+  // console.log(options);
   const buildSelect = () => {
     if (Array.isArray(options)) {
       return options?.map((item) => (
@@ -31,7 +31,7 @@ const FuskiFieldSelect: React.FunctionComponent<FieldConfigForm> = ({
     return null;
   };
   return (
-    <Form.Item label={label} rules={[{ required }]} name={key}>
+    <Form.Item label={label} rules={[{ required }]} name={name}>
       <Select
         placeholder={placeholder}
         showSearch
