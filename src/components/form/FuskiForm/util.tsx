@@ -5,6 +5,7 @@ import FieldSelect from "../fields/FuskiFieldSelect/FuskiFieldSelect";
 import FieldDate from "../fields/FuskiFieldDate/FuskiFieldDate";
 import FieldDateTime from "../fields/FuskiFieldDateTime/FuskiFieldDateTime";
 import FieldRangeDate from "../fields/FuskiFieldRangeDate/FuskiFieldRangeDate";
+import { FieldConfigForm } from "../utils/field";
 
 export const listFormFields = {
   Input: FieldInput,
@@ -14,7 +15,7 @@ export const listFormFields = {
   RangeDate: FieldRangeDate,
 };
 
-export const buildField = (field: any, i: number) => {
+export const buildField = (field: FieldConfigForm, i: number) => {
   const Component = listFormFields[field.component];
   return <Component key={i} {...field} />;
 };
