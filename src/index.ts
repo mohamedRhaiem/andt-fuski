@@ -29,3 +29,6 @@ export * from "./components/table/columns/Linked";
 export * from "./components/table/utils/configTable";
 
 export * from "./components/table/FuskiTable";
+
+// filter
+export * from "./components/filter/FuskiFilter";
