@@ -77,4 +77,9 @@ export default {
   emptyText: "table.empty",
   dataTestid: "checkingTable",
   rowKey: "chg_Id",
+  rowSelection: {
+    onSelect: (a, b, c) => message.info(`row ${b ? "selected" : "unselected"}`),
+    onChange: (a, b) => message.info(`${b.length} row(s) selected`),
+    type: "checkbox",
+  }
 } as ConfigTable;

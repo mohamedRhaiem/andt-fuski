@@ -17,4 +17,5 @@ Default.args = {
   data: data,
   columns: configTable.columns,
   rowKey: configTable.rowKey,
+  rowSelection: configTable.rowSelection
 };

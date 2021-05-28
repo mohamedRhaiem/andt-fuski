@@ -1,3 +1,4 @@
+import { TableRowSelection } from "antd/lib/table/interface";
 import type { ReactNode } from "react";
 
 interface ColumnsTypeCustom {
@@ -17,4 +18,5 @@ export interface ConfigTable {
   className?: string;
   dataTestid?: string;
   newObject?: any;
+  rowSelection?: TableRowSelection<any>;
 }

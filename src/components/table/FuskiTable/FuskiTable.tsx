@@ -6,20 +6,15 @@ interface Props {
   data?: any[];
   loading?: boolean;
 }
-const FuskiTable: React.FunctionComponent<ConfigTable & Props> = ({
-  columns,
-  data,
-  rowKey,
-  dataTestid,
-  loading,
-}: ConfigTable & Props) => {
+const FuskiTable: React.FunctionComponent<ConfigTable & Props> = (props) => {
   return (
     <Table
-      data-testid={dataTestid}
-      columns={columns}
-      loading={loading}
-      dataSource={data}
-      rowKey={rowKey}
+      data-testid={props.dataTestid}
+      columns={props.columns}
+      loading={props.loading}
+      dataSource={props.data}
+      rowKey={props.rowKey}
+      rowSelection={props.rowSelection}
     />
   );
 };
