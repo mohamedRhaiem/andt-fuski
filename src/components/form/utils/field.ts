@@ -1,5 +1,5 @@
 export interface FieldConfigForm {
-  key: string;
+  name: string;
   label?: string;
   placeholder?: string;
   border?: boolean;

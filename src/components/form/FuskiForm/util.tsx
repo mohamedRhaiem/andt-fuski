@@ -19,7 +19,7 @@ export const listFormFields:fieldsListType = {
   RangeDate: FuskiFieldRangeDate,
 };
 
-export const buildField = (field: any, i: number) => {
+export const buildField = (field: FieldConfigForm, i: number) => {
   const Component = listFormFields[field.component];
   return <Component key={i} {...field} />;
 };

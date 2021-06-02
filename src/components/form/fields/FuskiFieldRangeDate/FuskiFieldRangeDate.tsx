@@ -6,14 +6,14 @@ import { FieldConfigForm } from "../../utils/field";
 const { RangePicker } = DatePicker;
 
 const FuskiFieldRangeDate: React.FunctionComponent<FieldConfigForm> = ({
-  key,
+  name,
   required,
   label,
   style,
   border,
 }: FieldConfigForm) => {
   return (
-    <Form.Item name={key} rules={[{ required }]} label={label}>
+    <Form.Item name={name} rules={[{ required }]} label={label}>
       <RangePicker style={style} bordered={border} />
     </Form.Item>
   );
