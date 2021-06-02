@@ -14,7 +14,7 @@ const Template: Story<ConfigTable> = (args) => <FuskiTable {...args} />;
 export const Default = Template.bind({});
 
 Default.args = {
-  data: data,
+  data,
   columns: configTable.columns,
   rowKey: configTable.rowKey,
   rowSelection: configTable.rowSelection

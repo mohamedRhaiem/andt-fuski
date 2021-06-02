@@ -18,4 +18,4 @@ const FieldDate: React.FunctionComponent<FieldConfigForm> = ({
   );
 };
 
-export default FieldDate;
+export default FuskiFieldDate;

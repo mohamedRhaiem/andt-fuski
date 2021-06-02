@@ -1,3 +1,5 @@
+import "../assets/styles/global.less";
+
 // form components
 export * from "./components/form/fields/FuskiFieldRangeDate";
 

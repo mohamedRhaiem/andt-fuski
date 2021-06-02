@@ -1,4 +1,4 @@
 node_modules
 storybook-static
-build
-.vscode
+dist
+yarn-error.log
