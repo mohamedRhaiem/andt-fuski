@@ -29,11 +29,11 @@ const FilterTags: React.FC<FilterTagsProps> = (props) => {
   const buildChild = (value: any, field: FieldConfig) => {
     if (field.component === "Date") return moment(value).format("DD-MM-YYYY");
     if (field.component === "DateTime") return moment(value).format("DD-MM-YYYY HH:mm:ss");    
-
-    if (field.component === "Select") {
-      const element = find(field.options, { [field.valueProp]: value });
-      return element[field.displayProp];
-    } 
+    //SKIN
+    // if (field.component === "Select") {
+    //   const element = find(field.options, { [field.valueProp]: value });
+    //   return element[field.displayProp];
+    // } 
 
     if (field.component === "SelectApi")
       return field.options!.find((el) => el[field.valueProp!] === value)[field.displayProp!];

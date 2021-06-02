@@ -15,7 +15,7 @@ const FuskiForm: React.FunctionComponent<FormConfig> = ({
   form
 }: FormConfig) => {
   // Acredito que o formulário do filtro está sendo sobrescrito aqui por esse novo form.
-  const [formDefault] = Form.useForm(null)
+  const [formDefault] = Form.useForm();
   if (!form) {
     form = formDefault;
   }

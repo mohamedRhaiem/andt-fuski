@@ -5,7 +5,7 @@ export interface DateProps {
   value: string;
 }
 
-const Date: React.FC<DateProps> = ({ value }: DateProps) => (
+const FuskiDate: React.FC<DateProps> = ({ value }: DateProps) => (
   <div>
     <span
       style={{
@@ -26,4 +26,4 @@ const Date: React.FC<DateProps> = ({ value }: DateProps) => (
   </div>
 );
 
-export default Date;
+export default FuskiDate;

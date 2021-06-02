@@ -1,8 +1,8 @@
 import { SendOutlined } from '@ant-design/icons';
 import { message, Space, Tag, Tooltip } from 'antd';
 import React from 'react';
-import Date from '../columns/Date';
-import Group from '../columns/Group';
+import { FuskiDate } from '../columns/Date';
+import { FuskiGroup } from '../columns/Group';
 import { ConfigTable } from '../utils/configTable';
 
 type statusListType = {
@@ -20,13 +20,13 @@ export default {
     {
       title: 'Date',
       dataIndex: 'chg_Date',
-      render: (item: string) => <Date value={item} />,
+      render: (item: string) => <FuskiDate value={item} />,
       width: '15%',
     },
     {
       title: 'Place',
       dataIndex: 'chg_pla_IdPlace',
-      render: (item: any) => <Group featured={item?.pla_cha_IdChannel?.cha_Name} small={item?.pla_Name} />,
+      render: (item: any) => <FuskiGroup featured={item?.pla_cha_IdChannel?.cha_Name} small={item?.pla_Name} />,
       width: '30%',
       sorter: (a: any, b: any) => (a?.chg_pla_IdPlace?.pla_Name).localeCompare(b?.chg_pla_IdPlace?.pla_Name),
     },
@@ -68,9 +68,10 @@ export default {
   emptyText: "table.empty",
   dataTestid: "checkingTable",
   rowKey: "chg_Id",
-  rowSelection: {
-    onSelect: (a, b, c) => message.info(`row ${b ? "selected" : "unselected"}`),
-    onChange: (a, b) => message.info(`${b.length} row(s) selected`),
-    type: "checkbox",
-  }
+  //SKIN
+  // rowSelection: {
+  //   onSelect: (a, b, c) => message.info(`row ${b ? "selected" : "unselected"}`),
+  //   onChange: (a, b) => message.info(`${b.length} row(s) selected`),
+  //   type: "checkbox",
+  // }
 } as ConfigTable;

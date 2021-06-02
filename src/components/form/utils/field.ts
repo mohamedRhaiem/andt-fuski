@@ -6,7 +6,7 @@ export interface FieldConfigForm {
   style?: React.CSSProperties;
   disabled?: boolean;
   required?: boolean;
-  component?: string;
+  component: string;
   valueProp?: string;
   displayProp?: string;
   options?: Record<string, any>;
