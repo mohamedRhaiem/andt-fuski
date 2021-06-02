@@ -47,6 +47,7 @@ export default {
       ...pkg.babel,
       extensions: [...DEFAULT_EXTENSIONS, '.ts', '.tsx'],
       babelHelpers: 'runtime',
-    }),
+    })
   ],
+  
 };
