@@ -1,6 +1,6 @@
 {
   "name": "andt-fuski",
-  "version": "1.0.2",
+  "version": "1.0.10",
   "description": "A list of wrapped react components based on ant design.",
   "author": "Mohamed Ben Rhaiem",
   "license": "MIT",
@@ -8,8 +8,13 @@
     "url": "https://github.com/mohamedRhaiem/andt-fuski/issues"
   },
   "homepage": "https://github.com/mohamedRhaiem/andt-fuski#readme",
-  "main": "./build/index.js",
-  "module": "./build/index.es.js",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "jsnext:main": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mohamedRhaiem/andt-fuski.git"
@@ -22,7 +27,7 @@
   "scripts": {
     "storybook": "start-storybook -p 6006 --no-manager-cache",
     "build-storybook": "build-storybook",
-    "build": "rollup -c",
+    "build": "rimraf dist && NODE_ENV=production BABEL_ENV=production rollup -c",
     "lint-staged": "lint-staged",
     "lint-staged:js": "eslint --ext .js,.jsx,.ts,.tsx ",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx --quiet",
@@ -45,6 +50,7 @@
   "devDependencies": {
     "@ant-design/icons": "^4.6.2",
     "@babel/core": "^7.13.10",
+    "@rollup/plugin-babel": "^5.3.0",
     "@rollup/plugin-commonjs": "^17.1.0",
     "@rollup/plugin-node-resolve": "^11.2.0",
     "@storybook/addon-actions": "^6.1.21",
@@ -60,6 +66,7 @@
     "@typescript-eslint/parser": "^4.23.0",
     "antd": "^4.9.1",
     "babel-loader": "^8.2.2",
+    "babel-preset-react-app": "^10.0.0",
     "eslint": "^7.22.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-formatter-pretty": "^4.0.0",
@@ -71,12 +78,13 @@
     "less": "^2.7.3",
     "less-loader": "^4.1.0",
     "lint-staged": "^10.5.4",
-    "lodash": "^4.17.21",
     "mini-css-extract-plugin": "^1.4.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "rollup-plugin-analyzer": "^4.0.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.0",
+    "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.30.0",
     "stylelint": "^13.12.0",
     "stylelint-config-recommended": "^4.0.0",
@@ -86,8 +94,31 @@
   },
   "peerDependencies": {
     "antd": "^4.9.1",
+    "lodash": "^4.17.21",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
-  "dependencies": {}
+  "dependencies": {
+    "rollup": "^2.50.5",
+    "yarn": "^1.22.10"
+  },
+  "babel": {
+    "presets": [
+      [
+        "react-app",
+        {
+          "typescript": true,
+          "flow": false
+        }
+      ]
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-object-rest-spread",
+      "@babel/plugin-proposal-optional-chaining",
+      "@babel/plugin-syntax-dynamic-import",
+      "@babel/plugin-proposal-class-properties",
+      "transform-react-remove-prop-types"
+    ],
+    "exclude": "node_modules"
+  }
 }
