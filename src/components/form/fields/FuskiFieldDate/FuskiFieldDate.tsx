@@ -3,7 +3,7 @@ import Form from "antd/es/form";
 import { DatePicker } from "antd";
 import { FieldConfigForm } from "../../utils/field";
 
-const FieldDate: React.FunctionComponent<FieldConfigForm> = ({
+const FuskiFieldDate: React.FunctionComponent<FieldConfigForm> = ({
   key,
   required,
   label,
@@ -18,4 +18,4 @@ const FieldDate: React.FunctionComponent<FieldConfigForm> = ({
   );
 };
 
-export default FieldDate;
+export default FuskiFieldDate;
