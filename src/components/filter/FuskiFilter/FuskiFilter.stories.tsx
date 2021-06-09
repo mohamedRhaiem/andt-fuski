@@ -10,7 +10,7 @@ export default {
   component: FilterTags
 } as Meta
 
-const Template: Story<FuskiFilterProps> = (args: FuskiFilterProps) => <FuskiFilter {...args} />;
+const Template: Story<FuskiFilterProps> = (args) => <FuskiFilter {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   filterFields: FieldsFilter,
