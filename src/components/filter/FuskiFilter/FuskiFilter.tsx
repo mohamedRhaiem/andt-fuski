@@ -15,7 +15,7 @@ const FuskiFilter: React.FC<FuskiFilterProps> = (props) => {
   const [visible, setVisible] = useState(false);
   const [filter, setFilter] = useState(props.initialState ?? {});
 
-  const onFilter = (values) => {
+  const onFilter = (values:any) => {
     setVisible(false);
     setFilter(values);
     props.onFilter(values);

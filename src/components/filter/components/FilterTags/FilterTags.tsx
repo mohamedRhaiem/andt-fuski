@@ -28,9 +28,9 @@ const FilterTags: React.FC<FilterTagsProps> = (props) => {
 
   const buildChild = (value: any, field: FieldConfig) => {
     if (field.component === "Date") return moment(value).format("DD-MM-YYYY");
-    if (field.component === "DateTime") return moment(value).format("DD-MM-YYYY HH:mm:ss");    
-
-    if (field.component === "Select") {
+    if (field.component === "DateTime") return moment(value).format("DD-MM-YYYY HH:mm:ss");   
+     
+    if (field.component === "Select" && field.valueProp && field.displayProp) {
       const element = find(field.options, { [field.valueProp]: value });
       return element[field.displayProp];
     } 
