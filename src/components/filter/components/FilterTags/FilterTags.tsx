@@ -1,9 +1,10 @@
 import { FilterOutlined } from "@ant-design/icons";
-import { Button, Col, Row, Tag } from "antd";
+import { Button, Col, Row } from "antd";
 import type { Store } from "antd/es/form/interface";
 import React from "react";
 import { find } from "lodash";
 import moment from "moment";
+import CustomTag from "./components/CustomTag";
 
 interface FilterTagsProps {
   setVisible: (value: boolean) => void;
@@ -52,10 +53,13 @@ const FilterTags: React.FC<FilterTagsProps> = (props) => {
     return Object.keys(filter).map(
       (key) =>
         filter[key] && (
-          <Tag key={key} closable onClose={() => clearItem(key)}>
-            {buildChild(filter[key], find(fieldsFilter, { name: key }))}
-          </Tag>
-        )
+          <CustomTag
+            key={key}
+            itemKey={key}
+            onClose={clearItem}
+            text={buildChild(filter[key], find(fieldsFilter, { name: key }))}
+          ></CustomTag>
+        ),
     );
   };
 
@@ -63,7 +67,7 @@ const FilterTags: React.FC<FilterTagsProps> = (props) => {
     <>
       <Row>
         <Col span={24}>
-          <Button type="text" icon={<FilterOutlined />} loading={loading} onClick={onOpen} size="large" />
+          <Button type="text" icon={<FilterOutlined style={{color: '#2C65D6'}} />} loading={loading} onClick={onOpen} size="large" />
           {buildChildren()}
         </Col>
       </Row>
