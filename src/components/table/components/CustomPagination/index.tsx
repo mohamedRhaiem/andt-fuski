@@ -8,8 +8,8 @@ export const customPaginationRender = (_page: any, type: type, originalElement: 
 
   if (type === 'prev') {
     return (
-      <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
-        <div style={{ backgroundColor: '#F6F6F6', fontWeight: 'bold', borderRadius: 5, padding: '0 5px' }}>
+      <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+        <div style={{ backgroundColor: '#F6F6F6', fontWeight: 'bold', borderRadius: 5, padding: '5px 10px', marginRight: 30 }}>
           <span>{totalItems} itens</span>
         </div>
         <LeftOutlined />
@@ -21,7 +21,7 @@ export const customPaginationRender = (_page: any, type: type, originalElement: 
     return (
       <div>
         <RightOutlined />
-        <span>teste</span>
+        {/* <span>teste</span> */}
       </div>
     );
   }
