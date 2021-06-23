@@ -16,7 +16,9 @@ const Template: Story<FuskiRichModalProps> = (args) => {
   return (
     <>
       <Button onClick={() => setVisible(true)}>Open modal</Button>
-      <FuskiRichModal {...args} visible={visible} hide={() => setVisible(false)}/>
+      <FuskiRichModal {...args} visible={visible} hide={() => setVisible(false)}>
+        <h1>Test modal</h1>
+      </FuskiRichModal>
     </>
   );
 };
