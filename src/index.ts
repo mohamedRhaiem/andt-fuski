@@ -34,3 +34,7 @@ export * from "./components/table/FuskiTable";
 
 // filter
 export * from "./components/filter/FuskiFilter";
+
+// RichModal
+export * from "./components/rich-modal/FuskiRichModal";
+

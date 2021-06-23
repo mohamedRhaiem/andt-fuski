@@ -99,6 +99,7 @@
   },
   "dependencies": {
     "@rollup/plugin-node-resolve": "^13.0.0",
+    "react-draggable": "^4.4.3",
     "rollup": "^2.50.5",
     "yarn": "^1.22.10"
   },
