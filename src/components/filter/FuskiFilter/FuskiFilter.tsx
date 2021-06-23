@@ -11,7 +11,6 @@ export interface FuskiFilterProps {
 }
 
 const FuskiFilter: React.FC<FuskiFilterProps> = (props) => {
-  console.log(props);
   const [visible, setVisible] = useState(false);
   const [filter, setFilter] = useState(props.initialState ?? {});
 

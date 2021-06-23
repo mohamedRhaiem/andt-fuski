@@ -14,7 +14,6 @@ const FuskiForm: React.FunctionComponent<FormConfig> = ({
   size,
   form
 }: FormConfig) => {
-  // Acredito que o formulário do filtro está sendo sobrescrito aqui por esse novo form.
   const [formDefault] = Form.useForm();
   if (!form) {
     form = formDefault;
@@ -23,8 +22,6 @@ const FuskiForm: React.FunctionComponent<FormConfig> = ({
   form.setFieldsValue(store);
 
   const action = (values: any) => {
-    console.log(form.getFieldsValue());
-    console.log(values);
     onAction(values);
   }
 
