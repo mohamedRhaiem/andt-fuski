@@ -1,41 +1,46 @@
 import React, { useState } from "react";
-import { Table } from "antd";
-import { ConfigTable } from "../utils/configTable";
-import { customPaginationRender } from "../components/CustomPagination";
+import { Button, Table } from "antd";
+import { ConfigTable, CustomPaginationInterface } from "../utils/configTable";
+import CustomPagination from "../components/CustomPagination";
 
 interface Props {
   data?: any[];
   loading?: boolean;
+  customPagination?: CustomPaginationInterface;
 }
 
 const FuskiTable: React.FunctionComponent<ConfigTable & Props> = (props) => {
 
-  const [pageSize] = useState(10);
+  const [currentPage, setCurrentPage] = useState(props.customPagination?.defaultPage ?? 1);
+  const [pageSize, setPageSize] = useState(props.customPagination?.pageSize);
+  const [unifiedPaginationProps] = useState(props.customPagination);
+  
+  const paginate = (page: number, pageSize?: number) => {
+    setCurrentPage(page);
+    setPageSize(pageSize);
+    props.customPagination?.callback(page, pageSize);
+  };
 
   return (
-    <Table
-      data-testid={props.dataTestid}
-      columns={props.columns}
-      loading={props.loading}
-      dataSource={props.data}
-      rowKey={props.rowKey}
-      rowSelection={props.rowSelection}
-      pagination={{
-        defaultPageSize: 10,
-        simple: true,
-        // pageSize,
-        showSizeChanger: true,
-        position: ['topRight', 'bottomRight'],
-        itemRender: (p, t, el) => {
-          return (
-            <>
-              {customPaginationRender(p, t, el, 1300)}
-            </>
-          )
-        },
-        showLessItems: true,
-      }}
-    />
+    <div>
+      {props.customPagination && unifiedPaginationProps && (
+        <CustomPagination {...unifiedPaginationProps} pageSize={pageSize ?? 10} callback={paginate} currentPage={currentPage} />
+      )}
+
+      <Table
+        data-testid={props.dataTestid}
+        columns={props.columns}
+        loading={props.loading}
+        dataSource={props.data}
+        rowKey={props.rowKey}
+        rowSelection={props.rowSelection}
+        pagination={props.customPagination?.visible ? false : {}}
+      />
+
+      {props.customPagination && unifiedPaginationProps && (
+        <CustomPagination {...unifiedPaginationProps} pageSize={pageSize ?? 10} callback={paginate} currentPage={currentPage} />
+      )}
+    </div>
   );
 };
 
