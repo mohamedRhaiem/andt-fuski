@@ -1,0 +1,448 @@
+[
+  {
+    "chg_Description": "RESERVAS CRUZ GNT AJUSTADO",
+    "chg_ExhibitionDateTimeStart": "2021-01-01T07:00:10",
+    "chg_pla_IdPlace": {
+      "pla_Code": "OFHD_NAC",
+      "pla_ReconciliationType": 1,
+      "pla_ReconciliationMap": 3,
+      "pla_CheckingTolerance": 1800.0,
+      "pla_ProgrammingCode": "491",
+      "pla_cha_IdChannel": {
+        "cha_Id": 1,
+        "cha_Name": "OFF - HD6",
+        "cha_Origin": "midiamais"
+      },
+      "pla_Name": "OFF HD (NACIONAL)",
+      "pla_reg_IdRegion": {
+        "reg_Id": 1,
+        "reg_Name": "NACIONAL"
+      },
+      "pla_Id": 1
+    },
+    "chg_Uuid": "CE-225",
+    "chg_Status": 1,
+    "chg_Id": 10,
+    "chg_plt_IdPlaylistType": {
+      "plt_Id": 1,
+      "plt_Name": "Linear"
+    },
+    "chg_Date": "2021-01-01",
+    "chg_ExhibitionDateTimeEnd": "2021-01-02T06:56:08",
+    "chg_sep_IdSeparator": 1
+  },
+  {
+    "chg_Description": "PROVISÓRIA NOVO ROTEIRO OK",
+    "chg_ExhibitionDateTimeStart": "2021-01-06T07:00:05",
+    "chg_pla_IdPlace": {
+      "pla_Code": "OFHD_NAC",
+      "pla_ReconciliationType": 1,
+      "pla_ReconciliationMap": 3,
+      "pla_CheckingTolerance": 1800.0,
+      "pla_ProgrammingCode": "491",
+      "pla_cha_IdChannel": {
+        "cha_Id": 1,
+        "cha_Name": "OFF - HD6",
+        "cha_Origin": "midiamais"
+      },
+      "pla_Name": "OFF HD (NACIONAL)",
+      "pla_reg_IdRegion": {
+        "reg_Id": 1,
+        "reg_Name": "NACIONAL"
+      },
+      "pla_Id": 1
+    },
+    "chg_Uuid": "CE-229",
+    "chg_Status": 3,
+    "chg_Id": 11,
+    "chg_plt_IdPlaylistType": {
+      "plt_Id": 1,
+      "plt_Name": "Linear"
+    },
+    "chg_Date": "2021-01-06",
+    "chg_ExhibitionDateTimeEnd": "2021-01-07T06:54:08",
+    "chg_sep_IdSeparator": 1
+  },
+  {
+    "chg_Description": "- V1 -",
+    "chg_ExhibitionDateTimeStart": "2021-01-05T07:00:00",
+    "chg_pla_IdPlace": {
+      "pla_Code": "OFHD_NAC",
+      "pla_ReconciliationType": 1,
+      "pla_ReconciliationMap": 3,
+      "pla_CheckingTolerance": 1800.0,
+      "pla_ProgrammingCode": "491",
+      "pla_cha_IdChannel": {
+        "cha_Id": 1,
+        "cha_Name": "OFF - HD6",
+        "cha_Origin": "midiamais"
+      },
+      "pla_Name": "OFF HD (NACIONAL)",
+      "pla_reg_IdRegion": {
+        "reg_Id": 1,
+        "reg_Name": "NACIONAL"
+      },
+      "pla_Id": 1
+    },
+    "chg_Uuid": "CE-210",
+    "chg_Status": 3,
+    "chg_Id": 12,
+    "chg_plt_IdPlaylistType": {
+      "plt_Id": 1,
+      "plt_Name": "Linear"
+    },
+    "chg_Date": "2021-01-05",
+    "chg_ExhibitionDateTimeEnd": "2021-01-06T06:55:16",
+    "chg_sep_IdSeparator": 1
+  },
+  {
+    "chg_Description": "Versao 00",
+    "chg_ExhibitionDateTimeStart": "2021-01-05T07:13:51",
+    "chg_pla_IdPlace": {
+      "pla_Code": "GN6",
+      "pla_ReconciliationType": 1,
+      "pla_ReconciliationMap": 1,
+      "pla_CheckingTolerance": 1800.0,
+      "pla_ProgrammingCode": "GN6",
+      "pla_cha_IdChannel": {
+        "cha_Id": 2,
+        "cha_Name": "Canal Europa",
+        "cha_Origin": "siscom"
+      },
+      "pla_Name": "GN6",
+      "pla_reg_IdRegion": {
+        "reg_Id": 1,
+        "reg_Name": "NACIONAL"
+      },
+      "pla_Id": 2
+    },
+    "chg_Uuid": "CE-206",
+    "chg_Status": 3,
+    "chg_Id": 13,
+    "chg_plt_IdPlaylistType": {
+      "plt_Id": 1,
+      "plt_Name": "Linear"
+    },
+    "chg_Date": "2021-01-05",
+    "chg_ExhibitionDateTimeEnd": "2021-01-06T06:59:00",
+    "chg_sep_IdSeparator": 1
+  },
+  {
+    "chg_Description": "PROVISÓRIA NOVO ROTEIRO OK",
+    "chg_ExhibitionDateTimeStart": "2021-01-07T06:58:05",
+    "chg_pla_IdPlace": {
+      "pla_Code": "OFHD_NAC",
+      "pla_ReconciliationType": 1,
+      "pla_ReconciliationMap": 3,
+      "pla_CheckingTolerance": 1800.0,
+      "pla_ProgrammingCode": "491",
+      "pla_cha_IdChannel": {
+        "cha_Id": 1,
+        "cha_Name": "OFF - HD6",
+        "cha_Origin": "midiamais"
+      },
+      "pla_Name": "OFF HD (NACIONAL)",
+      "pla_reg_IdRegion": {
+        "reg_Id": 1,
+        "reg_Name": "NACIONAL"
+      },
+      "pla_Id": 1
+    },
+    "chg_Uuid": "CE-231",
+    "chg_Status": 3,
+    "chg_Id": 14,
+    "chg_plt_IdPlaylistType": {
+      "plt_Id": 1,
+      "plt_Name": "Linear"
+    },
+    "chg_Date": "2021-01-07",
+    "chg_ExhibitionDateTimeEnd": "2021-01-08T06:55:01",
+    "chg_sep_IdSeparator": 1
+  },
+  {
+    "chg_Description": "Versao 00",
+    "chg_ExhibitionDateTimeStart": "2021-01-06T07:15:00",
+    "chg_pla_IdPlace": {
+      "pla_Code": "GN6",
+      "pla_ReconciliationType": 1,
+      "pla_ReconciliationMap": 1,
+      "pla_CheckingTolerance": 1800.0,
+      "pla_ProgrammingCode": "GN6",
+      "pla_cha_IdChannel": {
+        "cha_Id": 2,
+        "cha_Name": "Canal Europa",
+        "cha_Origin": "siscom"
+      },
+      "pla_Name": "GN6",
+      "pla_reg_IdRegion": {
+        "reg_Id": 1,
+        "reg_Name": "NACIONAL"
+      },
+      "pla_Id": 2
+    },
+    "chg_Uuid": "CE-207",
+    "chg_Status": 3,
+    "chg_Id": 15,
+    "chg_plt_IdPlaylistType": {
+      "plt_Id": 1,
+      "plt_Name": "Linear"
+    },
+    "chg_Date": "2021-01-06",
+    "chg_ExhibitionDateTimeEnd": "2021-01-07T07:05:00",
+    "chg_sep_IdSeparator": 1
+  },
+  {
+    "chg_ExhibitionDateTimeStart": "2021-01-08T07:00:05",
+    "chg_pla_IdPlace": {
+      "pla_Code": "OFHD_NAC",
+      "pla_ReconciliationType": 1,
+      "pla_ReconciliationMap": 3,
+      "pla_CheckingTolerance": 1800.0,
+      "pla_ProgrammingCode": "491",
+      "pla_cha_IdChannel": {
+        "cha_Id": 1,
+        "cha_Name": "OFF - HD6",
+        "cha_Origin": "midiamais"
+      },
+      "pla_Name": "OFF HD (NACIONAL)",
+      "pla_reg_IdRegion": {
+        "reg_Id": 1,
+        "reg_Name": "NACIONAL"
+      },
+      "pla_Id": 1
+    },
+    "chg_Uuid": "CE-244",
+    "chg_Status": 3,
+    "chg_Id": 16,
+    "chg_plt_IdPlaylistType": {
+      "plt_Id": 1,
+      "plt_Name": "Linear"
+    },
+    "chg_Date": "2021-01-08",
+    "chg_ExhibitionDateTimeEnd": "2021-01-09T06:46:25",
+    "chg_sep_IdSeparator": 1
+  },
+  {
+    "chg_Description": "RESERVAS CRUZ GNT AJUSTADO",
+    "chg_ExhibitionDateTimeStart": "2021-01-01T07:00:10",
+    "chg_pla_IdPlace": {
+      "pla_Code": "OFHD_NAC",
+      "pla_ReconciliationType": 1,
+      "pla_ReconciliationMap": 3,
+      "pla_CheckingTolerance": 1800.0,
+      "pla_ProgrammingCode": "491",
+      "pla_cha_IdChannel": {
+        "cha_Id": 1,
+        "cha_Name": "OFF - HD6",
+        "cha_Origin": "midiamais"
+      },
+      "pla_Name": "OFF HD (NACIONAL)",
+      "pla_reg_IdRegion": {
+        "reg_Id": 1,
+        "reg_Name": "NACIONAL"
+      },
+      "pla_Id": 1
+    },
+    "chg_Uuid": "CE-225",
+    "chg_Status": 1,
+    "chg_Id": 10,
+    "chg_plt_IdPlaylistType": {
+      "plt_Id": 1,
+      "plt_Name": "Linear"
+    },
+    "chg_Date": "2021-01-01",
+    "chg_ExhibitionDateTimeEnd": "2021-01-02T06:56:08",
+    "chg_sep_IdSeparator": 1
+  },
+  {
+    "chg_Description": "PROVISÓRIA NOVO ROTEIRO OK",
+    "chg_ExhibitionDateTimeStart": "2021-01-06T07:00:05",
+    "chg_pla_IdPlace": {
+      "pla_Code": "OFHD_NAC",
+      "pla_ReconciliationType": 1,
+      "pla_ReconciliationMap": 3,
+      "pla_CheckingTolerance": 1800.0,
+      "pla_ProgrammingCode": "491",
+      "pla_cha_IdChannel": {
+        "cha_Id": 1,
+        "cha_Name": "OFF - HD6",
+        "cha_Origin": "midiamais"
+      },
+      "pla_Name": "OFF HD (NACIONAL)",
+      "pla_reg_IdRegion": {
+        "reg_Id": 1,
+        "reg_Name": "NACIONAL"
+      },
+      "pla_Id": 1
+    },
+    "chg_Uuid": "CE-229",
+    "chg_Status": 3,
+    "chg_Id": 11,
+    "chg_plt_IdPlaylistType": {
+      "plt_Id": 1,
+      "plt_Name": "Linear"
+    },
+    "chg_Date": "2021-01-06",
+    "chg_ExhibitionDateTimeEnd": "2021-01-07T06:54:08",
+    "chg_sep_IdSeparator": 1
+  },
+  {
+    "chg_Description": "- V1 -",
+    "chg_ExhibitionDateTimeStart": "2021-01-05T07:00:00",
+    "chg_pla_IdPlace": {
+      "pla_Code": "OFHD_NAC",
+      "pla_ReconciliationType": 1,
+      "pla_ReconciliationMap": 3,
+      "pla_CheckingTolerance": 1800.0,
+      "pla_ProgrammingCode": "491",
+      "pla_cha_IdChannel": {
+        "cha_Id": 1,
+        "cha_Name": "OFF - HD6",
+        "cha_Origin": "midiamais"
+      },
+      "pla_Name": "OFF HD (NACIONAL)",
+      "pla_reg_IdRegion": {
+        "reg_Id": 1,
+        "reg_Name": "NACIONAL"
+      },
+      "pla_Id": 1
+    },
+    "chg_Uuid": "CE-210",
+    "chg_Status": 3,
+    "chg_Id": 12,
+    "chg_plt_IdPlaylistType": {
+      "plt_Id": 1,
+      "plt_Name": "Linear"
+    },
+    "chg_Date": "2021-01-05",
+    "chg_ExhibitionDateTimeEnd": "2021-01-06T06:55:16",
+    "chg_sep_IdSeparator": 1
+  },
+  {
+    "chg_Description": "Versao 00",
+    "chg_ExhibitionDateTimeStart": "2021-01-05T07:13:51",
+    "chg_pla_IdPlace": {
+      "pla_Code": "GN6",
+      "pla_ReconciliationType": 1,
+      "pla_ReconciliationMap": 1,
+      "pla_CheckingTolerance": 1800.0,
+      "pla_ProgrammingCode": "GN6",
+      "pla_cha_IdChannel": {
+        "cha_Id": 2,
+        "cha_Name": "Canal Europa",
+        "cha_Origin": "siscom"
+      },
+      "pla_Name": "GN6",
+      "pla_reg_IdRegion": {
+        "reg_Id": 1,
+        "reg_Name": "NACIONAL"
+      },
+      "pla_Id": 2
+    },
+    "chg_Uuid": "CE-206",
+    "chg_Status": 3,
+    "chg_Id": 13,
+    "chg_plt_IdPlaylistType": {
+      "plt_Id": 1,
+      "plt_Name": "Linear"
+    },
+    "chg_Date": "2021-01-05",
+    "chg_ExhibitionDateTimeEnd": "2021-01-06T06:59:00",
+    "chg_sep_IdSeparator": 1
+  },
+  {
+    "chg_Description": "PROVISÓRIA NOVO ROTEIRO OK",
+    "chg_ExhibitionDateTimeStart": "2021-01-07T06:58:05",
+    "chg_pla_IdPlace": {
+      "pla_Code": "OFHD_NAC",
+      "pla_ReconciliationType": 1,
+      "pla_ReconciliationMap": 3,
+      "pla_CheckingTolerance": 1800.0,
+      "pla_ProgrammingCode": "491",
+      "pla_cha_IdChannel": {
+        "cha_Id": 1,
+        "cha_Name": "OFF - HD6",
+        "cha_Origin": "midiamais"
+      },
+      "pla_Name": "OFF HD (NACIONAL)",
+      "pla_reg_IdRegion": {
+        "reg_Id": 1,
+        "reg_Name": "NACIONAL"
+      },
+      "pla_Id": 1
+    },
+    "chg_Uuid": "CE-231",
+    "chg_Status": 3,
+    "chg_Id": 14,
+    "chg_plt_IdPlaylistType": {
+      "plt_Id": 1,
+      "plt_Name": "Linear"
+    },
+    "chg_Date": "2021-01-07",
+    "chg_ExhibitionDateTimeEnd": "2021-01-08T06:55:01",
+    "chg_sep_IdSeparator": 1
+  },
+  {
+    "chg_Description": "Versao 00",
+    "chg_ExhibitionDateTimeStart": "2021-01-06T07:15:00",
+    "chg_pla_IdPlace": {
+      "pla_Code": "GN6",
+      "pla_ReconciliationType": 1,
+      "pla_ReconciliationMap": 1,
+      "pla_CheckingTolerance": 1800.0,
+      "pla_ProgrammingCode": "GN6",
+      "pla_cha_IdChannel": {
+        "cha_Id": 2,
+        "cha_Name": "Canal Europa",
+        "cha_Origin": "siscom"
+      },
+      "pla_Name": "GN6",
+      "pla_reg_IdRegion": {
+        "reg_Id": 1,
+        "reg_Name": "NACIONAL"
+      },
+      "pla_Id": 2
+    },
+    "chg_Uuid": "CE-207",
+    "chg_Status": 3,
+    "chg_Id": 15,
+    "chg_plt_IdPlaylistType": {
+      "plt_Id": 1,
+      "plt_Name": "Linear"
+    },
+    "chg_Date": "2021-01-06",
+    "chg_ExhibitionDateTimeEnd": "2021-01-07T07:05:00",
+    "chg_sep_IdSeparator": 1
+  },
+  {
+    "chg_ExhibitionDateTimeStart": "2021-01-08T07:00:05",
+    "chg_pla_IdPlace": {
+      "pla_Code": "OFHD_NAC",
+      "pla_ReconciliationType": 1,
+      "pla_ReconciliationMap": 3,
+      "pla_CheckingTolerance": 1800.0,
+      "pla_ProgrammingCode": "491",
+      "pla_cha_IdChannel": {
+        "cha_Id": 1,
+        "cha_Name": "OFF - HD6",
+        "cha_Origin": "midiamais"
+      },
+      "pla_Name": "OFF HD (NACIONAL)",
+      "pla_reg_IdRegion": {
+        "reg_Id": 1,
+        "reg_Name": "NACIONAL"
+      },
+      "pla_Id": 1
+    },
+    "chg_Uuid": "CE-244",
+    "chg_Status": 3,
+    "chg_Id": 16,
+    "chg_plt_IdPlaylistType": {
+      "plt_Id": 1,
+      "plt_Name": "Linear"
+    },
+    "chg_Date": "2021-01-08",
+    "chg_ExhibitionDateTimeEnd": "2021-01-09T06:46:25",
+    "chg_sep_IdSeparator": 1
+  }
+]

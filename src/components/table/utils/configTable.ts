@@ -11,6 +11,15 @@ interface ColumnsTypeCustom {
   component?: string;
 }
 
+export interface CustomPaginationInterface {
+  visible: boolean;
+  totalItems: number;
+  pageSize: number;
+  currentPage: number;
+  callback: (page: number, size?: number) => void;
+  defaultPage?: number;
+}
+
 export interface ConfigTable {
   columns: ColumnsTypeCustom[];
   rowKey: string;
@@ -19,4 +28,5 @@ export interface ConfigTable {
   dataTestid?: string;
   newObject?: any;
   rowSelection?: TableRowSelection<any>;
+  customPagination?: CustomPaginationInterface;
 }
