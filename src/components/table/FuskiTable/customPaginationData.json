@@ -1,0 +1,403 @@
+[
+  {
+    "chg_Description": "AJUSTAR",
+    "chg_ExhibitionDateTimeStart": "2021-04-14T07:00:45",
+    "chg_pla_IdPlace": {
+      "pla_Code": "PRC_NAC",
+      "pla_ReconciliationType": 1,
+      "pla_ReconciliationMap": 3,
+      "pla_CheckingTolerance": 1800.0,
+      "pla_ProgrammingCode": "810",
+      "pla_cha_IdChannel": {
+        "cha_Id": 41,
+        "cha_Name": "PREMIERE COMBATE",
+        "cha_Origin": "midiamais"
+      },
+      "pla_Name": "PREMIERE COMBATE( NACIONAL)",
+      "pla_reg_IdRegion": {
+        "reg_Id": 1,
+        "reg_Name": "NACIONAL"
+      },
+      "pla_Id": 170
+    },
+    "chg_Uuid": "CE-3039",
+    "chg_Status": 1,
+    "chg_Id": 1528,
+    "chg_plt_IdPlaylistType": {
+      "plt_Id": 1,
+      "plt_Name": "Linear"
+    },
+    "chg_Date": "2021-04-14",
+    "chg_ExhibitionDateTimeEnd": "2021-04-15T07:00:46",
+    "chg_sep_IdSeparator": 1
+  },
+  {
+    "chg_ExhibitionDateTimeStart": "2021-04-14T06:57:50",
+    "chg_pla_IdPlace": {
+      "pla_Code": "CBB_NAC",
+      "pla_ReconciliationType": 1,
+      "pla_ReconciliationMap": 3,
+      "pla_CheckingTolerance": 1800.0,
+      "pla_ProgrammingCode": "270",
+      "pla_cha_IdChannel": {
+        "cha_Id": 11,
+        "cha_Name": "CANAL BRASIL",
+        "cha_Origin": "midiamais"
+      },
+      "pla_Name": "CANAL BRASIL(NACIONAL)",
+      "pla_reg_IdRegion": {
+        "reg_Id": 1,
+        "reg_Name": "NACIONAL"
+      },
+      "pla_Id": 145
+    },
+    "chg_Uuid": "CE-2936",
+    "chg_Status": 1,
+    "chg_Id": 1529,
+    "chg_plt_IdPlaylistType": {
+      "plt_Id": 1,
+      "plt_Name": "Linear"
+    },
+    "chg_Date": "2021-04-14",
+    "chg_ExhibitionDateTimeEnd": "2021-04-15T06:55:41",
+    "chg_sep_IdSeparator": 1
+  },
+  {
+    "chg_ExhibitionDateTimeStart": "2021-04-14T08:00:05",
+    "chg_pla_IdPlace": {
+      "pla_Code": "GSHD_NAC",
+      "pla_ReconciliationType": 1,
+      "pla_ReconciliationMap": 3,
+      "pla_CheckingTolerance": 1800.0,
+      "pla_ProgrammingCode": "452",
+      "pla_cha_IdChannel": {
+        "cha_Id": 21,
+        "cha_Name": "MAIS NA TELA",
+        "cha_Origin": "midiamais"
+      },
+      "pla_Name": "MAIS NA TELA NACIONAL",
+      "pla_reg_IdRegion": {
+        "reg_Id": 1,
+        "reg_Name": "NACIONAL"
+      },
+      "pla_Id": 150
+    },
+    "chg_Uuid": "CE-2934",
+    "chg_Status": 1,
+    "chg_Id": 1530,
+    "chg_plt_IdPlaylistType": {
+      "plt_Id": 1,
+      "plt_Name": "Linear"
+    },
+    "chg_Date": "2021-04-14",
+    "chg_ExhibitionDateTimeEnd": "2021-04-15T07:56:30",
+    "chg_sep_IdSeparator": 1
+  },
+  {
+    "chg_ExhibitionDateTimeStart": "2021-04-14T07:57:20",
+    "chg_pla_IdPlace": {
+      "pla_Code": "TCA_NAC",
+      "pla_ReconciliationType": 1,
+      "pla_ReconciliationMap": 3,
+      "pla_CheckingTolerance": 1800.0,
+      "pla_ProgrammingCode": "110",
+      "pla_cha_IdChannel": {
+        "cha_Id": 63,
+        "cha_Name": "TC ACTION",
+        "cha_Origin": "midiamais"
+      },
+      "pla_Name": "TELECINE ACTION NACIONAL",
+      "pla_reg_IdRegion": {
+        "reg_Id": 1,
+        "reg_Name": "NACIONAL"
+      },
+      "pla_Id": 182
+    },
+    "chg_Uuid": "CE-2937",
+    "chg_Status": 1,
+    "chg_Id": 1531,
+    "chg_plt_IdPlaylistType": {
+      "plt_Id": 1,
+      "plt_Name": "Linear"
+    },
+    "chg_Date": "2021-04-14",
+    "chg_ExhibitionDateTimeEnd": "2021-04-15T08:05:47",
+    "chg_sep_IdSeparator": 1
+  },
+  {
+    "chg_ExhibitionDateTimeStart": "2021-04-14T07:32:20",
+    "chg_pla_IdPlace": {
+      "pla_Code": "TCL_NAC",
+      "pla_ReconciliationType": 1,
+      "pla_ReconciliationMap": 3,
+      "pla_CheckingTolerance": 1800.0,
+      "pla_ProgrammingCode": "990",
+      "pla_cha_IdChannel": {
+        "cha_Id": 64,
+        "cha_Name": "TC CULT",
+        "cha_Origin": "midiamais"
+      },
+      "pla_Name": "TELECINE CULT NACIONAL",
+      "pla_reg_IdRegion": {
+        "reg_Id": 1,
+        "reg_Name": "NACIONAL"
+      },
+      "pla_Id": 184
+    },
+    "chg_Uuid": "CE-2938",
+    "chg_Status": 1,
+    "chg_Id": 1532,
+    "chg_plt_IdPlaylistType": {
+      "plt_Id": 1,
+      "plt_Name": "Linear"
+    },
+    "chg_Date": "2021-04-14",
+    "chg_ExhibitionDateTimeEnd": "2021-04-15T07:40:05",
+    "chg_sep_IdSeparator": 1
+  },
+  {
+    "chg_ExhibitionDateTimeStart": "2021-04-14T07:00:00",
+    "chg_pla_IdPlace": {
+      "pla_Code": "OFHD_NAC",
+      "pla_ReconciliationType": 1,
+      "pla_ReconciliationMap": 3,
+      "pla_CheckingTolerance": 1800.0,
+      "pla_ProgrammingCode": "491",
+      "pla_cha_IdChannel": {
+        "cha_Id": 1,
+        "cha_Name": "OFF - HD6",
+        "cha_Origin": "midiamais"
+      },
+      "pla_Name": "OFF HD (NACIONAL)",
+      "pla_reg_IdRegion": {
+        "reg_Id": 1,
+        "reg_Name": "NACIONAL"
+      },
+      "pla_Id": 1
+    },
+    "chg_Uuid": "CE-2932",
+    "chg_Status": 1,
+    "chg_Id": 1533,
+    "chg_plt_IdPlaylistType": {
+      "plt_Id": 1,
+      "plt_Name": "Linear"
+    },
+    "chg_Date": "2021-04-14",
+    "chg_ExhibitionDateTimeEnd": "2021-04-15T06:55:46",
+    "chg_sep_IdSeparator": 1
+  },
+  {
+    "chg_ExhibitionDateTimeStart": "2021-04-14T08:22:20",
+    "chg_pla_IdPlace": {
+      "pla_Code": "TCF_NAC",
+      "pla_ReconciliationType": 1,
+      "pla_ReconciliationMap": 3,
+      "pla_CheckingTolerance": 1800.0,
+      "pla_ProgrammingCode": "334",
+      "pla_cha_IdChannel": {
+        "cha_Id": 65,
+        "cha_Name": "TC FUN",
+        "cha_Origin": "midiamais"
+      },
+      "pla_Name": "TELECINE FUN NACIONAL",
+      "pla_reg_IdRegion": {
+        "reg_Id": 1,
+        "reg_Name": "NACIONAL"
+      },
+      "pla_Id": 183
+    },
+    "chg_Uuid": "CE-2939",
+    "chg_Status": 1,
+    "chg_Id": 1534,
+    "chg_plt_IdPlaylistType": {
+      "plt_Id": 1,
+      "plt_Name": "Linear"
+    },
+    "chg_Date": "2021-04-14",
+    "chg_ExhibitionDateTimeEnd": "2021-04-15T06:56:38",
+    "chg_sep_IdSeparator": 1
+  },
+  {
+    "chg_ExhibitionDateTimeStart": "2021-04-14T08:22:20",
+    "chg_pla_IdPlace": {
+      "pla_Code": "TPP_NAC",
+      "pla_ReconciliationType": 1,
+      "pla_ReconciliationMap": 3,
+      "pla_CheckingTolerance": 1800.0,
+      "pla_ProgrammingCode": "114",
+      "pla_cha_IdChannel": {
+        "cha_Id": 67,
+        "cha_Name": "TC PIPOCA",
+        "cha_Origin": "midiamais"
+      },
+      "pla_Name": "TELECINE PIPOCA NACIONAL",
+      "pla_reg_IdRegion": {
+        "reg_Id": 1,
+        "reg_Name": "NACIONAL"
+      },
+      "pla_Id": 187
+    },
+    "chg_Uuid": "CE-2940",
+    "chg_Status": 1,
+    "chg_Id": 1535,
+    "chg_plt_IdPlaylistType": {
+      "plt_Id": 1,
+      "plt_Name": "Linear"
+    },
+    "chg_Date": "2021-04-14",
+    "chg_ExhibitionDateTimeEnd": "2021-04-15T07:44:08",
+    "chg_sep_IdSeparator": 1
+  },
+  {
+    "chg_ExhibitionDateTimeStart": "2021-04-14T07:00:05",
+    "chg_pla_IdPlace": {
+      "pla_Code": "TCP_NAC",
+      "pla_ReconciliationType": 1,
+      "pla_ReconciliationMap": 3,
+      "pla_CheckingTolerance": 1800.0,
+      "pla_ProgrammingCode": "90",
+      "pla_cha_IdChannel": {
+        "cha_Id": 68,
+        "cha_Name": "TC PREMIUM",
+        "cha_Origin": "midiamais"
+      },
+      "pla_Name": "TELECINE PREMIUN NACIONAL",
+      "pla_reg_IdRegion": {
+        "reg_Id": 1,
+        "reg_Name": "NACIONAL"
+      },
+      "pla_Id": 185
+    },
+    "chg_Uuid": "CE-2941",
+    "chg_Status": 1,
+    "chg_Id": 1536,
+    "chg_plt_IdPlaylistType": {
+      "plt_Id": 1,
+      "plt_Name": "Linear"
+    },
+    "chg_Date": "2021-04-14",
+    "chg_ExhibitionDateTimeEnd": "2021-04-15T07:28:42",
+    "chg_sep_IdSeparator": 1
+  },
+  {
+    "chg_ExhibitionDateTimeStart": "2021-04-14T07:57:20",
+    "chg_pla_IdPlace": {
+      "pla_Code": "TCT_NAC",
+      "pla_ReconciliationType": 1,
+      "pla_ReconciliationMap": 3,
+      "pla_CheckingTolerance": 1800.0,
+      "pla_ProgrammingCode": "333",
+      "pla_cha_IdChannel": {
+        "cha_Id": 69,
+        "cha_Name": "TC TOUCH",
+        "cha_Origin": "midiamais"
+      },
+      "pla_Name": "TELECINE TOUCH NACIONAL",
+      "pla_reg_IdRegion": {
+        "reg_Id": 1,
+        "reg_Name": "NACIONAL"
+      },
+      "pla_Id": 186
+    },
+    "chg_Uuid": "CE-2942",
+    "chg_Status": 1,
+    "chg_Id": 1537,
+    "chg_plt_IdPlaylistType": {
+      "plt_Id": 1,
+      "plt_Name": "Linear"
+    },
+    "chg_Date": "2021-04-14",
+    "chg_ExhibitionDateTimeEnd": "2021-04-15T07:48:39",
+    "chg_sep_IdSeparator": 1
+  },
+  {
+    "chg_ExhibitionDateTimeStart": "2021-04-14T07:00:05",
+    "chg_pla_IdPlace": {
+      "pla_Code": "BIS_NAC",
+      "pla_ReconciliationType": 1,
+      "pla_ReconciliationMap": 3,
+      "pla_CheckingTolerance": 1800.0,
+      "pla_ProgrammingCode": "234",
+      "pla_cha_IdChannel": {
+        "cha_Id": 7,
+        "cha_Name": "BIS",
+        "cha_Origin": "midiamais"
+      },
+      "pla_Name": "BIS (NACIONAL)",
+      "pla_reg_IdRegion": {
+        "reg_Id": 1,
+        "reg_Name": "NACIONAL"
+      },
+      "pla_Id": 141
+    },
+    "chg_Uuid": "CE-2933",
+    "chg_Status": 1,
+    "chg_Id": 1538,
+    "chg_plt_IdPlaylistType": {
+      "plt_Id": 1,
+      "plt_Name": "Linear"
+    },
+    "chg_Date": "2021-04-14",
+    "chg_ExhibitionDateTimeEnd": "2021-04-15T06:54:30",
+    "chg_sep_IdSeparator": 1
+  },
+  {
+    "chg_Description": "- V3 - MILHAS",
+    "chg_ExhibitionDateTimeStart": "2021-04-12T08:17:15",
+    "chg_pla_IdPlace": {
+      "pla_Code": "MPX_SP",
+      "pla_ReconciliationType": 1,
+      "pla_ReconciliationMap": 3,
+      "pla_CheckingTolerance": 1800.0,
+      "pla_cha_IdChannel": {
+        "cha_Id": 22,
+        "cha_Name": "MEGAPIX",
+        "cha_Origin": "midiamais"
+      },
+      "pla_Name": "MEGAPIX (SAO PAULO)",
+      "pla_reg_IdRegion": {
+        "reg_Id": 1,
+        "reg_Name": "NACIONAL"
+      },
+      "pla_Id": 602
+    },
+    "chg_Uuid": "CE-2993",
+    "chg_Status": 1,
+    "chg_Id": 1539,
+    "chg_plt_IdPlaylistType": {
+      "plt_Id": 1,
+      "plt_Name": "Linear"
+    },
+    "chg_Date": "2021-04-12",
+    "chg_ExhibitionDateTimeEnd": "2021-04-13T07:13:11",
+    "chg_sep_IdSeparator": 1
+  },
+  {
+    "chg_Description": "Versao 00",
+    "chg_ExhibitionDateTimeStart": "2021-04-23T06:05:00",
+    "chg_pla_IdPlace": {
+      "pla_Code": "ACR",
+      "pla_cha_IdChannel": {
+        "cha_Id": 3,
+        "cha_Name": "Tv Aberta",
+        "cha_Origin": "siscom"
+      },
+      "pla_Name": "Acre",
+      "pla_reg_IdRegion": {
+        "reg_Id": 1,
+        "reg_Name": "NACIONAL"
+      },
+      "pla_Id": 3
+    },
+    "chg_Uuid": "CE-3029",
+    "chg_Status": 1,
+    "chg_Id": 1540,
+    "chg_plt_IdPlaylistType": {
+      "plt_Id": 1,
+      "plt_Name": "Linear"
+    },
+    "chg_Date": "2021-04-23",
+    "chg_ExhibitionDateTimeEnd": "2021-04-24T03:00:00",
+    "chg_sep_IdSeparator": 1
+  }
+]
