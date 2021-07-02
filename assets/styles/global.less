@@ -1,11 +1,76 @@
 @import '~antd/dist/antd.less';
 @import (css) url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
 
+
+// VARIÁVEIS RESPONSIVAS
+@fuski-font-base-screen-general: normal normal 400 normal 13.5px/1.2 'Lato', sans-serif;
+@fuski-font-base-screen-xxl: normal normal 400 normal 15.5px/1.2 'Lato', sans-serif;
+
+
+// VARIÁVEIS GERAIS
+
+@fuski-font-page-title: 900 1.6rem/1'Lato', sans-serif;
+/* Título da página carregada */
+@fuski-font-panel-title: 700 1.4rem/1 'Lato', sans-serif;
+/* Título dos painéis modais e drawers */
+@fuski-font-panel-subtitle: 900 1.15rem/1 'Lato', sans-serif;
+/* Nome de abas e título secundário de tela, modais e drawers  */
+
+@fuski-font-label: 900 .9rem/1 'Lato', sans-serif;
+/* Para todos os labels do sistema */
+@fuski-font-component: 400 1rem/1.2 'Lato', sans-serif;
+/* Para todos os componentes de input e navegação */
+@fuski-font-button: 700 1.1rem/1 'Lato', sans-serif;
+/* Para todos os botões */
+@fuski-font-table: 400 .95rem/1.2 'Lato', sans-serif;
+/* Para todos os botões */
+
+
+@fuski-color-primary: #2c65d6;
+
+@fuski-color-app-background: #F5F6FA;
+@fuski-color-app-bar: #FFFFFF;
+@fuski-color-app-footer: #FFFFFF;
+@fuski-color-app-panel: #FFFFFF;
+@fuski-color-app-panel-secondary: #F6F6F6;
+
+@fuski-color-success: #60B106;
+@fuski-color-info: #2A80E4;
+@fuski-color-alert: #F5A623;
+@fuski-color-error: #A91E2F;
+
+@fuski-color-bkg-success: #e1f4ca;
+@fuski-color-bkg-info: #bddafc;
+@fuski-color-bkg-alert: #fcdca8;
+@fuski-color-bkg-error: #FFE1E5;
+
+@fuski-padding-component: 6px 10px;
+@fuski-border-component: 1px solid #d9d9d9;
+@fuski-border-radius-component: 5px;
+@fuski-height-component:40px;
+@fuski-border-button: 0px solid #d9d9d9;
+
+
+@fuski-color-panel: #ffffff;
+@fuski-shadow-panel: 0px 0px 5px rgba(0,0,0,.04);
+@fuski-border-panel: 0px solid rgba(0,0,0,.09);
+@fuski-border-radius-panel: 5px;
+
+
+// FORMATAÇÃO ANT DESIGN
 html,
 body,
 #root {
   height: 100%;
-  font: normal normal 400 normal 13.5px/1.2 'Lato', sans-serif;
+  background-color: @fuski-color-app-background;
+
+  @media (max-width: @screen-xxl) {
+    font: @fuski-font-base-screen-general;
+  }
+
+  @media (min-width: (@screen-xxl + 1)) {
+    font: @fuski-font-base-screen-xxl;
+  }
 }
 
 .colorWeak {
@@ -55,53 +120,20 @@ ol {
   }
 }
 
-// Variáveis
-@fuski-font-page-title: 900 1.6rem/1'Lato', sans-serif;
-/* Título da página carregada */
-@fuski-font-panel-title: 700 1.4rem/1 'Lato', sans-serif;
-/* Título dos painéis modais e drawers */
-@fuski-font-panel-subtitle: 900 1.15rem/1 'Lato', sans-serif;
-/* Nome de abas e título secundário de tela, modais e drawers  */
 
-@fuski-font-label: 900 .9rem/1 'Lato', sans-serif;
-/* Para todos os labels do sistema */
-@fuski-font-component: 400 1rem/1.2 'Lato', sans-serif;
-/* Para todos os componentes de input e navegação */
-@fuski-font-button: 700 1.1rem/1 'Lato', sans-serif;
-/* Para todos os botões */
-@fuski-font-table: 400 .95rem/1.2 'Lato', sans-serif;
-/* Para todos os botões */
-
-
-
-@fuski-color-primary: #2c65d6;
-
-@fuski-color-app-background: #F5F6FA;
-@fuski-color-app-bar: #FFFFFF;
-@fuski-color-app-footer: #FFFFFF;
-@fuski-color-app-panel: #FFFFFF;
-@fuski-color-app-panel-secondary: #F6F6F6;
-
-@fuski-color-success: #60B106;
-@fuski-color-info: #2A80E4;
-@fuski-color-alert: #F5A623;
-@fuski-color-error: #A91E2F;
-
-@fuski-color-bkg-success: #e1f4ca;
-@fuski-color-bkg-info: #bddafc;
-@fuski-color-bkg-alert: #fcdca8;
-@fuski-color-bkg-error: #FFE1E5;
-
-@fuski-padding-component: 6px 10px;
-@fuski-border-component: 1px solid #d9d9d9;
-@fuski-border-radius-component: 5px;
-@fuski-height-component:40px;
-@fuski-border-button: 0px solid #d9d9d9;
 
 
 // FORMATAÇÃO DE COMPONENTES
 
 //FuskiTable
+.fuski-table-container {
+  box-shadow: @fuski-shadow-panel;
+  border: @fuski-border-panel;
+  background: @fuski-color-panel;
+  border-radius: @fuski-border-radius-panel;
+  padding: 3px 0px;
+}
+
 .ant-table {
   font: @fuski-font-table; 
 }
@@ -112,6 +144,46 @@ ol {
 }
 .ant-table-tbody > tr > td {
   padding: 9px;
+}
+
+.ant-pagination-simple {
+  font: @fuski-font-table;
+}
+
+.ant-pagination-simple .ant-pagination-simple-pager {
+  height: 32px;
+}
+
+.ant-pagination-simple .ant-pagination-simple-pager input {
+  border-radius: @fuski-border-radius-component;
+}
+
+.ant-pagination-simple .ant-pagination-prev,
+.ant-pagination-simple .ant-pagination-next {
+  height: 32px;
+  line-height: 32px;
+}
+
+.ant-table-pagination.ant-pagination {
+  margin: 10px 10px 7px;
+}
+
+.ant-pagination-item a {
+  padding: 4px 6px;
+}
+
+.ant-pagination-item, 
+.ant-pagination-prev, 
+.ant-pagination-next, 
+.ant-pagination-item-link,
+.ant-pagination-disabled .ant-pagination-item-link, 
+.ant-pagination-disabled:hover .ant-pagination-item-link,
+.ant-pagination-prev .ant-pagination-item-link,
+.ant-pagination-prev:hover .ant-pagination-item-link,
+.ant-pagination-next .ant-pagination-item-link,
+.ant-pagination-next:hover .ant-pagination-item-link {
+  height: @fuski-height-component;
+  border-radius: @fuski-border-radius-component;
 }
 
 //FuskiFilter
@@ -186,6 +258,14 @@ ol {
 .ant-modal-close-x {
   color: @fuski-color-primary;
   font-weight: 900;
+}
+
+.filter-tags-panel {
+  box-shadow: @fuski-shadow-panel;
+  border: @fuski-border-panel;
+  background: @fuski-color-panel;
+  border-radius: @fuski-border-radius-panel;
+  padding: 3px 0px;
 }
 
 // FORMATAÇÃO ANTIGA

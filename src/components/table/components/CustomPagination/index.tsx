@@ -39,14 +39,14 @@ const CustomPagination: React.FC<CustomPaginationInterface> = (props) => {
       justifyContent: 'flex-end',
       flexWrap: 'wrap',
       alignItems: 'center',
-      margin: '10px 5px'
+      margin: '8px 5px',
     }}>
       <div
         style={{
           backgroundColor: '#F6F6F6',
           fontWeight: 'bold',
           borderRadius: 5,
-          padding: '5px 10px',
+          padding: '10px 10px',
           marginRight: 30,
         }}
       >

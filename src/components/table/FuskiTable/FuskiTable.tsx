@@ -22,7 +22,7 @@ const FuskiTable: React.FunctionComponent<ConfigTable & Props> = (props) => {
   };
 
   return (
-    <div>
+    <div className='fuski-table-container'>
       {props.customPagination && unifiedPaginationProps && (
         <CustomPagination {...unifiedPaginationProps} pageSize={pageSize ?? 10} callback={paginate} currentPage={currentPage} />
       )}
