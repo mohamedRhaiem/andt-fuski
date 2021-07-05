@@ -17,11 +17,23 @@ module.exports = {
     },
   },
   webpackFinal: async (config) => {
-    config.module.rules.push({
+    config.module.rules.push( {
+      test: /\.jsx?$/,
+      loader: 'babel-loader'
+  },
+  {
       test: /\.less$/,
-      use: ['style-loader', 'css-loader', 'less-loader'],
-      include: path.resolve(__dirname, '../assets/styles'),
-    });
+      use: [
+          { loader: 'style-loader' },
+          {
+            loader: 'css-loader',
+            options: {
+                modules: true,
+            },
+        },
+          { loader: 'less-loader' }
+      ],
+  });
     return config;
   },
 };
