@@ -1,23 +1,9 @@
-import { DownOutlined, LeftOutlined, RightOutlined } from '@ant-design/icons';
+import { DownOutlined } from '@ant-design/icons';
 import { Button, Dropdown, Menu, Pagination } from 'antd';
 import { CustomPaginationInterface } from 'components/table/utils/configTable';
-import React, { useState } from 'react';
+import React from 'react';
 
-type type = "page" | "prev" | "next" | "jump-prev" | "jump-next";
 const defaultPageSizes = [10, 20, 30, 50, 100];
-
-const itemRender = (_page: any, type: type, originalElement: any) => {
-
-  if (type === 'prev') {
-    return <LeftOutlined />;
-  }
-
-  if (type === 'next') {
-    return <RightOutlined />;
-  }
-
-  return originalElement;
-};
 
 const CustomPagination: React.FC<CustomPaginationInterface> = (props) => {
   const changePageSize = (newSize: number) => {
@@ -27,38 +13,38 @@ const CustomPagination: React.FC<CustomPaginationInterface> = (props) => {
   const menu = (
     <Menu>
       {defaultPageSizes.map((size) => (
-        <Menu.Item onClick={() => changePageSize(size)}>{size} / página</Menu.Item>
+        <Menu.Item key={size} onClick={() => changePageSize(size)}>{size} / página</Menu.Item>
       ))}
     </Menu>
   );
 
   return (
-    <div style={{
+    <div
+      data-testid='pagination'
+      style={{
       display: 'flex',
       flexDirection: 'row',
       justifyContent: 'flex-end',
       flexWrap: 'wrap',
       alignItems: 'center',
-      margin: '8px 5px',
+      margin: '10px 5px'
     }}>
       <div
         style={{
           backgroundColor: '#F6F6F6',
           fontWeight: 'bold',
           borderRadius: 5,
-          padding: '10px 10px',
+          padding: '5px 10px',
           marginRight: 30,
         }}
       >
         <span>{props.totalItems} itens</span>
       </div>
       <Pagination
+        simple
         onChange={props.callback}
-        defaultCurrent={1}
         current={props.currentPage}
         total={props.totalItems}
-        simple
-        itemRender={itemRender}
         pageSize={props.pageSize}
       />
       <div>

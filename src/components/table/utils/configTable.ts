@@ -12,11 +12,12 @@ interface ColumnsTypeCustom {
 }
 
 export interface CustomPaginationInterface {
-  visible: boolean;
   totalItems: number;
   pageSize: number;
-  currentPage: number;
   callback: (page: number, size?: number) => void;
+  
+  visible?: boolean;
+  currentPage?: number;
   defaultPage?: number;
 }
 

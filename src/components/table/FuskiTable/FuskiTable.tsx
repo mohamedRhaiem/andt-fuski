@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Table } from "antd";
+import { Table } from "antd";
 import { ConfigTable, CustomPaginationInterface } from "../utils/configTable";
 import CustomPagination from "../components/CustomPagination";
 
@@ -10,21 +10,24 @@ interface Props {
 }
 
 const FuskiTable: React.FunctionComponent<ConfigTable & Props> = (props) => {
-
   const [currentPage, setCurrentPage] = useState(props.customPagination?.defaultPage ?? 1);
-  const [pageSize, setPageSize] = useState(props.customPagination?.pageSize);
-  const [unifiedPaginationProps] = useState(props.customPagination);
+  const [pageSize, setPageSize] = useState(props.customPagination?.pageSize ?? 10);
   
   const paginate = (page: number, pageSize?: number) => {
     setCurrentPage(page);
-    setPageSize(pageSize);
+    setPageSize(pageSize ?? 10);
     props.customPagination?.callback(page, pageSize);
   };
 
   return (
-    <div className='fuski-table-container'>
-      {props.customPagination && unifiedPaginationProps && (
-        <CustomPagination {...unifiedPaginationProps} pageSize={pageSize ?? 10} callback={paginate} currentPage={currentPage} />
+    <div>
+      {props.customPagination  && (
+        <CustomPagination
+          totalItems={props.customPagination?.totalItems}
+          pageSize={pageSize}
+          callback={paginate}
+          currentPage={currentPage}
+        />
       )}
 
       <Table
@@ -34,11 +37,16 @@ const FuskiTable: React.FunctionComponent<ConfigTable & Props> = (props) => {
         dataSource={props.data}
         rowKey={props.rowKey}
         rowSelection={props.rowSelection}
-        pagination={props.customPagination?.visible ? false : {}}
+        pagination={props.customPagination ? false : {}}
       />
 
-      {props.customPagination && unifiedPaginationProps && (
-        <CustomPagination {...unifiedPaginationProps} pageSize={pageSize ?? 10} callback={paginate} currentPage={currentPage} />
+      {props.customPagination && (
+        <CustomPagination
+          totalItems={props.customPagination?.totalItems}
+          pageSize={pageSize}
+          callback={paginate}
+          currentPage={currentPage}
+        />
       )}
     </div>
   );
