@@ -20,10 +20,10 @@ build_dev:
     - hw
   script:
     - node --version
-    - npm --version
-    - npm config set registry https://artifactory.globoi.com/artifactory/api/npm/npm-repos
-    - npm install
-    - npm run build-storybook
+    - yarn --version
+    - yarn config set registry https://artifactory.globoi.com/artifactory/api/npm/npm-repos
+    - yarn
+    - yarn build-storybook
   artifacts:
     paths:
       - storybook-static/
