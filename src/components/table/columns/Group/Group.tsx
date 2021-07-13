@@ -1,4 +1,5 @@
 import React from "react";
+import styles from './index.less';
 
 export interface GroupProps {
   featured: string;
@@ -7,8 +8,8 @@ export interface GroupProps {
 
 const FuskiGroup: React.FC<GroupProps> = ({ featured, small }: GroupProps) => (
   <>
-    <div style={{ fontWeight: 700 }}>{featured}</div>
-    <div style={{ fontSize: "0.85em", fontWeight: 300 }}>{small}</div>
+    <div className={styles.tableGroupFeatured}>{featured}</div>
+    <div className={styles.tableGroupSmall}>{small}</div>
   </>
 );
 

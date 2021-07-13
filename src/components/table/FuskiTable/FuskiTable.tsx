@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { Table } from "antd";
 import { ConfigTable, CustomPaginationInterface } from "../utils/configTable";
-import CustomPagination from "../components/CustomPagination";
+import { CustomPagination } from "../components/CustomPagination";
+
+import styles from './index.less'
 
 interface Props {
   data?: any[];
@@ -20,7 +22,7 @@ const FuskiTable: React.FunctionComponent<ConfigTable & Props> = (props) => {
   };
 
   return (
-    <div>
+    <div className={styles.fuskiTableContainer}>
       {props.customPagination  && (
         <CustomPagination
           totalItems={props.customPagination?.totalItems}

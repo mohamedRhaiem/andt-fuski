@@ -3,6 +3,8 @@ import { Button, Dropdown, Menu, Pagination } from 'antd';
 import { CustomPaginationInterface } from 'components/table/utils/configTable';
 import React from 'react';
 
+import styles from './index.less';
+
 const defaultPageSizes = [10, 20, 30, 50, 100];
 
 const CustomPagination: React.FC<CustomPaginationInterface> = (props) => {
@@ -21,22 +23,10 @@ const CustomPagination: React.FC<CustomPaginationInterface> = (props) => {
   return (
     <div
       data-testid='pagination'
-      style={{
-      display: 'flex',
-      flexDirection: 'row',
-      justifyContent: 'flex-end',
-      flexWrap: 'wrap',
-      alignItems: 'center',
-      margin: '10px 5px'
-    }}>
+      className={styles.tableCustomPagination}
+    >
       <div
-        style={{
-          backgroundColor: '#F6F6F6',
-          fontWeight: 'bold',
-          borderRadius: 5,
-          padding: '5px 10px',
-          marginRight: 30,
-        }}
+        className={styles.tableCustomPaginationTotalItems}
       >
         <span>{props.totalItems} itens</span>
       </div>

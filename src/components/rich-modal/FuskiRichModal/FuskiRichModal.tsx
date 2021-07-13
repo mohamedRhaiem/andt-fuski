@@ -2,6 +2,7 @@ import { Modal, Button } from 'antd';
 import React from 'react';
 import Draggable from 'react-draggable';
 import { FuskiRichModalProps } from '../utils/richModalConfig';
+import styles from './index.less';
 
 const FuskiRichModal: React.FC<FuskiRichModalProps> = (props) => {
   const { visible, onSubmit, hide, children, title, width, hideSubmit } = props;
@@ -11,10 +12,7 @@ const FuskiRichModal: React.FC<FuskiRichModalProps> = (props) => {
       destroyOnClose
       title={
         <div
-          style={{
-            width: '100%',
-            cursor: 'move',
-          }}
+          className={styles.richModalTitle}
         >
           {title}
         </div>
@@ -22,7 +20,7 @@ const FuskiRichModal: React.FC<FuskiRichModalProps> = (props) => {
       width={width}
       onCancel={hide}
       visible={visible}
-      bodyStyle={{ paddingBottom: 80 }}
+      bodyStyle={styles.richModalBody}
       modalRender={(modal) => (
         <Draggable>
           <div>{modal}</div>
@@ -30,11 +28,9 @@ const FuskiRichModal: React.FC<FuskiRichModalProps> = (props) => {
       )}
       footer={
         <div
-          style={{
-            textAlign: 'right',
-          }}
+          className={styles.richModalFooter}
         >
-          <Button onClick={hide} style={{ marginRight: 8 }}>
+          <Button onClick={hide} className={styles.richModalCloseButton}>
             {props.cancelButtonText ?? 'Fechar'}
           </Button>
           {!hideSubmit && (
