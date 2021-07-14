@@ -1,4 +1,5 @@
 import React from "react";
+import { Space } from "antd";
 import { CalendarOutlined } from "@ant-design/icons";
 import styles from './index.less';
 
@@ -9,8 +10,10 @@ export interface DateProps {
 const FuskiDate: React.FC<DateProps> = ({ value }: DateProps) => (
   <div>
     <span className={styles.tableDate}>
-      <CalendarOutlined className={styles.tableDateCalendar} />
-      {value}
+      <Space>
+        <CalendarOutlined/>
+        {value}
+      </Space>
     </span>
   </div>
 );

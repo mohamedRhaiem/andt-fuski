@@ -25,9 +25,7 @@ const CustomPagination: React.FC<CustomPaginationInterface> = (props) => {
       data-testid='pagination'
       className={styles.tableCustomPagination}
     >
-      <div
-        className={styles.tableCustomPaginationTotalItems}
-      >
+      <div className={styles.tableCustomPaginationTotalItems}>
         <span>{props.totalItems} itens</span>
       </div>
       <Pagination

@@ -27,13 +27,13 @@ export default {
       title: 'Place',
       dataIndex: 'chg_pla_IdPlace',
       render: (item: any) => <FuskiGroup featured={item?.pla_cha_IdChannel?.cha_Name} small={item?.pla_Name} />,
-      width: '30%',
+      width: '20%',
       sorter: (a: any, b: any) => (a?.chg_pla_IdPlace?.pla_Name).localeCompare(b?.chg_pla_IdPlace?.pla_Name),
     },
     {
       title: 'Description',
       dataIndex: 'chg_Description',
-      width: '20%',
+      width: '30%',
     },
     {
       title: 'PlayList',
