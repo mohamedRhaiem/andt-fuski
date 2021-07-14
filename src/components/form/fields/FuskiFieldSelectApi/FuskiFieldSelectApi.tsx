@@ -3,7 +3,7 @@ import Form from 'antd/es/form';
 import { Select } from 'antd';
 import { v4 as uuidv4 } from 'uuid';
 import { FieldConfigForm } from '../../utils/field';
-import { buildDisplay } from 'components/form/utils/option';
+import { buildDisplay } from '../../utils/option';
 
 const FuskiFieldSelectApi: React.FunctionComponent<FieldConfigForm> = ({
   name,
