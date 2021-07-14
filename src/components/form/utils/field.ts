@@ -1,5 +1,5 @@
 export interface FieldConfigForm {
-  name: string;
+  name: string | string[];
   label?: string;
   placeholder?: string;
   border?: boolean;
@@ -8,10 +8,11 @@ export interface FieldConfigForm {
   required?: boolean;
   component: string;
   valueProp?: string;
-  displayProp?: string;
+  displayProp?: string | string[];
   options?: Record<string, any>;
-  mode?: "multiple" | "tags";
+  mode?: 'multiple' | 'tags';
   loading?: boolean;
   format?: string;
   onChange?: () => {};
+  onApiCall?: () => any;
 }

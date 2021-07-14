@@ -4,7 +4,7 @@ import Draggable from 'react-draggable';
 import { FuskiRichModalProps } from '../utils/richModalConfig';
 
 const FuskiRichModal: React.FC<FuskiRichModalProps> = (props) => {
-  const { visible, onSubmit, hide, children, title, width, hideSubmit } = props;
+  const { id,visible, onSubmit, hide, children, title, width, hideSubmit } = props;
 
   return (
     <Modal
@@ -38,7 +38,7 @@ const FuskiRichModal: React.FC<FuskiRichModalProps> = (props) => {
             {props.cancelButtonText ?? 'Fechar'}
           </Button>
           {!hideSubmit && (
-            <Button form="myForm" key="submit" onClick={onSubmit} type="primary" htmlType="submit">
+            <Button form={id} key="submit" onClick={onSubmit} type="primary" htmlType="submit">
               {props.okButtonText ?? 'Confirmar'}
             </Button>
           )}

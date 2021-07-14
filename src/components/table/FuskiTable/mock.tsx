@@ -3,7 +3,8 @@ import { message, Space, Tag, Tooltip } from 'antd';
 import React from 'react';
 import { FuskiDate } from '../columns/Date';
 import { FuskiGroup } from '../columns/Group';
-import { ConfigTable } from '../utils/configTable';
+import FuskiConfigTable from '../utils/FuskiConfigTable/FuskiConfigTable';
+
 
 type statusListType = {
   [key: number]: { label: string; color: string };
@@ -74,4 +75,4 @@ export default {
   //   onChange: (a, b) => message.info(`${b.length} row(s) selected`),
   //   type: "checkbox",
   // }
-} as ConfigTable;
+} as FuskiConfigTable;
