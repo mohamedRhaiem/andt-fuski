@@ -2,6 +2,7 @@ import { message } from "antd";
 import { ReactNode } from "react";
 
 export interface FuskiRichModalProps {
+  id: string;
   hide: () => void;
   onSubmit?: () => void;
   visible: boolean;

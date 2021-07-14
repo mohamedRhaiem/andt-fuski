@@ -11,7 +11,11 @@ export * from "./components/form/fields/FuskiFieldDateTime";
 
 export * from "./components/form/fields/FuskiFieldInput";
 
+export * from "./components/form/fields/FuskiFieldNumber";
+
 export * from "./components/form/fields/FuskiFieldSelect";
+
+export * from "./components/form/fields/FuskiFieldSelectApi";
 
 export * from "./components/form/utils/field";
 
@@ -28,7 +32,11 @@ export * from "./components/table/columns/Date";
 
 export * from "./components/table/columns/Linked";
 
+//Must be checked
 export * from "./components/table/utils/configTable";
+export * from "./components/table/utils/FuskiConfigTable";
+// end check
+
 
 export * from "./components/table/FuskiTable";
 
@@ -37,4 +45,12 @@ export * from "./components/filter/FuskiFilter";
 
 // RichModal
 export * from "./components/rich-modal/FuskiRichModal";
+
+// Hooks
+export * from "./components/hooks/FuskiModalVisibility";
+
+export * from "./components/hooks/FuskiValue";
+
+// Menu
+export * from "./components/menu/FuskiMenuExpand";
 

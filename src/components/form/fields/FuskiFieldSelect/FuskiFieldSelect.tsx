@@ -3,6 +3,7 @@ import Form from "antd/es/form";
 import { Select } from "antd";
 import { v4 as uuidv4 } from "uuid";
 import { FieldConfigForm } from "../../utils/field";
+import { buildDisplay } from "../../utils/option";
 
 const FuskiFieldSelect: React.FunctionComponent<FieldConfigForm> = ({
   name,
@@ -19,12 +20,12 @@ const FuskiFieldSelect: React.FunctionComponent<FieldConfigForm> = ({
   loading,
   onChange,
 }: FieldConfigForm) => {
-  // console.log(options);
+
   const buildSelect = () => {
     if (Array.isArray(options)) {
       return options?.map((item) => (
         <Select.Option key={uuidv4()} value={item[valueProp!]}>
-          {item[displayProp!]}
+           {buildDisplay(item,displayProp!)}
         </Select.Option>
       ));
     }
@@ -37,7 +38,7 @@ const FuskiFieldSelect: React.FunctionComponent<FieldConfigForm> = ({
         showSearch
         optionFilterProp="children"
         filterOption={(input, option) =>
-          option?.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
+          option?.children?.toLowerCase().indexOf(input.toLowerCase()) >= 0
         }
         loading={loading}
         onChange={onChange}
