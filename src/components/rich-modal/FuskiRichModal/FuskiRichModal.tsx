@@ -20,7 +20,7 @@ const FuskiRichModal: React.FC<FuskiRichModalProps> = (props) => {
       width={width}
       onCancel={hide}
       visible={visible}
-      bodyStyle={styles.richModalBody}
+      className={styles.richModalBody}
       modalRender={(modal) => (
         <Draggable>
           <div>{modal}</div>

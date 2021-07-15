@@ -27,7 +27,7 @@ const FilterSidebarDrawer: React.FC<FilterSidebarProps> = (props) => {
       width={props.width ?? 360}
       onClose={onClose}
       visible={visible}
-      bodyStyle={styles.filterSidebarBody}
+      className={styles.filterSidebarBody}
       footer={
         <div
           className={styles.filterSidebarFooter}
