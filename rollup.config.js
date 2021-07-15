@@ -37,6 +37,7 @@ export default {
         'config',
         'dist',
         'node_modules/**',
+        '**/*.mock',
         '*.test.{js+(|x), ts+(|x)}',
         '**/*.test.{js+(|x), ts+(|x)}',
         '**/*.stories.{js+(|x), ts+(|x)}',
