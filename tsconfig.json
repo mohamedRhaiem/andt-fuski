@@ -40,17 +40,19 @@
     "alwaysStrict": true,
   },
   "include": [
-    "src/**/*"
+    "src/**/*",
+    "typings.d.ts"
   ],
   "exclude": [
     "coverage",
     "config",
     "dist",
     "node_modules/**",
-    "src/components/**/*.test.js",
-    "src/components/**/*.test.ts",
     "src/components/**/*.stories.tsx",
     "src/components/**/*.mock.tsx",
     "src/components/**/*.mock.ts",
+    "src/**/__tests__/**",
+    "jest/**", 
+    "stories/**"
   ]
 }

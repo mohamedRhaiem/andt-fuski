@@ -1,10 +1,12 @@
 import React from "react";
 
 import FuskiFieldInput from "../fields/FuskiFieldInput/FuskiFieldInput";
-import FuskiFieldSelect from "../fields/FuskiFieldSelect/FuskiFieldSelect";
 import FuskiFieldDate from "../fields/FuskiFieldDate/FuskiFieldDate";
 import FuskiFieldDateTime from "../fields/FuskiFieldDateTime/FuskiFieldDateTime";
 import FuskiFieldRangeDate from "../fields/FuskiFieldRangeDate/FuskiFieldRangeDate";
+import FuskiFieldSelect from "../fields/FuskiFieldSelect/FuskiFieldSelect";
+import FuskiFieldNumber from "../fields/FuskiFieldNumber/FuskiFieldNumber";
+import FuskiFieldSelectApi from "../fields/FuskiFieldSelectApi/FuskiFieldSelectApi";
 import { FieldConfigForm } from "../utils/field";
 
 type fieldsListType = {
@@ -13,7 +15,9 @@ type fieldsListType = {
 
 export const listFormFields:fieldsListType = {
   Input: FuskiFieldInput,
+  InputNumber: FuskiFieldNumber,
   Select: FuskiFieldSelect,
+  SelectApi: FuskiFieldSelectApi,
   Date: FuskiFieldDate,
   DateTime: FuskiFieldDateTime,
   RangeDate: FuskiFieldRangeDate,

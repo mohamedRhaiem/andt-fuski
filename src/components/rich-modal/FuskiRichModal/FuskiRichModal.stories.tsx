@@ -27,6 +27,7 @@ export const Default = Template.bind({});
 
 Default.args = {
   title: 'Modal',
+  id: 'modal',
   onSubmit: onSubmitMock
 };
 

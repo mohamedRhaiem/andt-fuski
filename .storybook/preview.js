@@ -1,5 +1,1 @@
-require('../assets/styles/global.less');
-
-export const parameters = {
-  actions: { argTypesRegex: '^on[A-Z].*' },
-};
+import '!style-loader!css-loader!less-loader!../assets/styles/global.less';
