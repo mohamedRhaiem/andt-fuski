@@ -7,8 +7,8 @@ export interface GroupProps {
 
 const FuskiGroup: React.FC<GroupProps> = ({ featured, small }: GroupProps) => (
   <>
-    <div style={{ fontWeight: 700 }}>{featured}</div>
-    <div style={{ fontSize: "0.85em", fontWeight: 300 }}>{small}</div>
+    <div style={{ fontWeight: 900 }}>{featured}</div>
+    <div style={{ fontSize: "0.85em", fontWeight: 400 }}>{small}</div>
   </>
 );
 

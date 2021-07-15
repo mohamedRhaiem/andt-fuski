@@ -67,8 +67,10 @@ const FilterTags: React.FC<FilterTagsProps> = (props) => {
     <>
       <Row>
         <Col span={24}>
-          <Button type="text" icon={<FilterOutlined style={{color: '#2C65D6'}} />} loading={loading} onClick={onOpen} size="large" />
-          {buildChildren()}
+          <div className='filter-tags-panel'>
+            <Button type="text" icon={<FilterOutlined style={{color: '#2C65D6'}} />} loading={loading} onClick={onOpen} size="large" />
+            {buildChildren()}
+          </div>
         </Col>
       </Row>
     </>

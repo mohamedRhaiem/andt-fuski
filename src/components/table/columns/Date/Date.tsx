@@ -10,13 +10,13 @@ const FuskiDate: React.FC<DateProps> = ({ value }: DateProps) => (
     <span
       style={{
         fontSize: "0.9em",
-        backgroundColor: "rgba(0,0,0,.07)",
+        backgroundColor: "rgba(0,0,0,.05)",
         padding: "4px 7px",
         display: "inline-flex",
         flexDirection: "row",
         justifyContent: "flex-start",
         alignItems: "center",
-        borderRadius: "3px",
+        borderRadius: "4px",
         letterSpacing: "-0.5px",
       }}
     >
