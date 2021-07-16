@@ -1,4 +1,4 @@
-import { Modal, Button } from 'antd';
+import { Modal, Button, Space } from 'antd';
 import React from 'react';
 import Draggable from 'react-draggable';
 import { FuskiRichModalProps } from '../utils/richModalConfig';
@@ -11,33 +11,30 @@ const FuskiRichModal: React.FC<FuskiRichModalProps> = (props) => {
     <Modal
       destroyOnClose
       title={
-        <div
-          className={styles.richModalTitle}
-        >
+        <div className={styles.richModalTitle}>
           {title}
         </div>
       }
       width={width}
       onCancel={hide}
       visible={visible}
-      className={styles.richModalBody}
       modalRender={(modal) => (
         <Draggable>
           <div>{modal}</div>
         </Draggable>
       )}
       footer={
-        <div
-          className={styles.richModalFooter}
-        >
-          <Button onClick={hide} className={styles.richModalCloseButton}>
-            {props.cancelButtonText ?? 'Fechar'}
-          </Button>
-          {!hideSubmit && (
-            <Button form={id} key="submit" onClick={onSubmit} type="primary" htmlType="submit">
-              {props.okButtonText ?? 'Confirmar'}
+        <div className={styles.richModalFooter}>
+          <Space>
+            <Button onClick={hide} className={styles.richModalCloseButton}>
+              {props.cancelButtonText ?? 'Fechar'}
             </Button>
-          )}
+            {!hideSubmit && (
+              <Button form={id} key="submit" onClick={onSubmit} type="primary" htmlType="submit">
+               {props.okButtonText ?? 'Confirmar'}
+              </Button>
+            )}
+            </Space>
         </div>
       }
     >
