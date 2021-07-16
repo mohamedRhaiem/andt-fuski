@@ -15,7 +15,6 @@ const getListCategoryRequest = async () => {
     return response
       .json()
       .then((data) => {
-        console.log(data);
         return data;
       })
       .catch((err) => {
