@@ -27,7 +27,7 @@
   "scripts": {
     "storybook": "start-storybook -p 6006 --no-manager-cache",
     "build-storybook": "build-storybook",
-    "build": "rimraf dist && NODE_ENV=production BABEL_ENV=production rollup -c",
+    "build": "rimraf dist && NODE_ENV=production  BABEL_ENV=production rollup -c",
     "lint-staged": "lint-staged",
     "lint-staged:js": "eslint --ext .js,.jsx,.ts,.tsx ",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx --quiet",

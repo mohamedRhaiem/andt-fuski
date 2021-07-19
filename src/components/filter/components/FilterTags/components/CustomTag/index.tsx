@@ -1,6 +1,7 @@
 import { CloseOutlined } from '@ant-design/icons';
 import { Tag } from 'antd';
 import React from 'react';
+import styles from './index.less';
 
 interface TagProps {
   itemKey: string;
@@ -15,7 +16,7 @@ const CustomTag: React.FC<TagProps> = (props) => {
         className='filter-tag'
         key={props.itemKey}
         closable
-        closeIcon={<CloseOutlined style={{color: '#fff', fontWeight: 700}} />}
+        closeIcon={<CloseOutlined className={styles.customTagCloseIcon} />}
         onClose={() => props.onClose(props.itemKey)}
       >
         {props.text}

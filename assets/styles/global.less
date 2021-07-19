@@ -1,6 +1,7 @@
 @import 'node_modules/antd/dist/antd.less';
 @import (css) url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
 
+
 // VARIÁVEIS RESPONSIVAS
 @fuski-font-base-screen-general: normal normal 400 normal 13.5px/1.2 'Lato', sans-serif;
 @fuski-font-base-screen-xxl: normal normal 400 normal 15.5px/1.2 'Lato', sans-serif;
@@ -21,8 +22,14 @@
 /* Para todos os componentes de input e navegação */
 @fuski-font-button: 700 1.1rem/1 'Lato', sans-serif;
 /* Para todos os botões */
-@fuski-font-table: 400 .95rem/1.2 'Lato', sans-serif;
-/* Para todos os botões */
+@fuski-font-table-regular: 400 .9rem/1.2 'Lato', sans-serif;
+/* Para o texto geral da tabela */
+@fuski-font-table-featured: 900 .9rem/1.2 'Lato', sans-serif;
+/* Para o texto geral da tabela */
+@fuski-font-table-secondary: 400 .80rem/1.2 'Lato', sans-serif;
+/* Para o texto geral da tabela */
+
+@fuski-font-text-condensed: -0.4px;
 
 
 @fuski-color-primary: #2c65d6;
@@ -54,6 +61,8 @@
 @fuski-shadow-panel: 0px 0px 5px rgba(0,0,0,.04);
 @fuski-border-panel: 0px solid rgba(0,0,0,.09);
 @fuski-border-radius-panel: 5px;
+
+@fuski-font-bold: 900;
 
 
 // FORMATAÇÃO ANT DESIGN
@@ -125,16 +134,8 @@ ol {
 // FORMATAÇÃO DE COMPONENTES
 
 //FuskiTable
-.fuski-table-container {
-  box-shadow: @fuski-shadow-panel;
-  border: @fuski-border-panel;
-  background: @fuski-color-panel;
-  border-radius: @fuski-border-radius-panel;
-  padding: 3px 0px;
-}
-
 .ant-table {
-  font: @fuski-font-table; 
+  font: @fuski-font-table-regular; 
 }
 
 .ant-table-thead > tr > th {
@@ -146,7 +147,7 @@ ol {
 }
 
 .ant-pagination-simple {
-  font: @fuski-font-table;
+  font: @fuski-font-table-regular;
 }
 
 .ant-pagination-simple .ant-pagination-simple-pager {
@@ -215,6 +216,7 @@ ol {
 
 .ant-picker, 
 .ant-input, 
+.ant-input-number,
 .ant-select:not(.ant-select-customize-input) .ant-select-selector {
   font: @fuski-font-component;
   padding: @fuski-padding-component;
@@ -257,14 +259,6 @@ ol {
 .ant-modal-close-x {
   color: @fuski-color-primary;
   font-weight: 900;
-}
-
-.filter-tags-panel {
-  box-shadow: @fuski-shadow-panel;
-  border: @fuski-border-panel;
-  background: @fuski-color-panel;
-  border-radius: @fuski-border-radius-panel;
-  padding: 3px 0px;
 }
 
 // FORMATAÇÃO ANTIGA

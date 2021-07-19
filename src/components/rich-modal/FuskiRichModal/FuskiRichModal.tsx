@@ -1,7 +1,8 @@
-import { Modal, Button } from 'antd';
+import { Modal, Button, Space } from 'antd';
 import React from 'react';
 import Draggable from 'react-draggable';
 import { FuskiRichModalProps } from '../utils/richModalConfig';
+import styles from './index.less';
 
 const FuskiRichModal: React.FC<FuskiRichModalProps> = (props) => {
   const { id,visible, onSubmit, hide, children, title, width, hideSubmit } = props;
@@ -10,38 +11,30 @@ const FuskiRichModal: React.FC<FuskiRichModalProps> = (props) => {
     <Modal
       destroyOnClose
       title={
-        <div
-          style={{
-            width: '100%',
-            cursor: 'move',
-          }}
-        >
+        <div className={styles.richModalTitle}>
           {title}
         </div>
       }
       width={width}
       onCancel={hide}
       visible={visible}
-      bodyStyle={{ paddingBottom: 80 }}
       modalRender={(modal) => (
         <Draggable>
           <div>{modal}</div>
         </Draggable>
       )}
       footer={
-        <div
-          style={{
-            textAlign: 'right',
-          }}
-        >
-          <Button onClick={hide} style={{ marginRight: 8 }}>
-            {props.cancelButtonText ?? 'Fechar'}
-          </Button>
-          {!hideSubmit && (
-            <Button form={id} key="submit" onClick={onSubmit} type="primary" htmlType="submit">
-              {props.okButtonText ?? 'Confirmar'}
+        <div className={styles.richModalFooter}>
+          <Space>
+            <Button onClick={hide} className={styles.richModalCloseButton}>
+              {props.cancelButtonText ?? 'Fechar'}
             </Button>
-          )}
+            {!hideSubmit && (
+              <Button form={id} key="submit" onClick={onSubmit} type="primary" htmlType="submit">
+               {props.okButtonText ?? 'Confirmar'}
+              </Button>
+            )}
+            </Space>
         </div>
       }
     >

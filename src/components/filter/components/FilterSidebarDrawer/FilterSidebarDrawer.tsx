@@ -1,5 +1,6 @@
-import { Button, Drawer } from "antd";
+import { Button, Drawer, Space } from "antd";
 import React, { ReactNode } from "react";
+import styles from './index.less';
 
 interface FilterSidebarProps {
   setVisible: (value: boolean) => void;
@@ -26,19 +27,16 @@ const FilterSidebarDrawer: React.FC<FilterSidebarProps> = (props) => {
       width={props.width ?? 360}
       onClose={onClose}
       visible={visible}
-      bodyStyle={{ paddingBottom: 80 }}
       footer={
-        <div
-          style={{
-            textAlign: "right",
-          }}
-        >
-          <Button form="form-filter" key="reset" htmlType="reset" style={{ marginRight: 8 }}>
-            Limpar
-          </Button>
-          <Button form="form-filter" key="submit" type="primary" htmlType="submit" loading={loading}>
-            Aplicar
-          </Button>
+        <div className={styles.filterSidebarFooter}>
+          <Space>
+            <Button form="form-filter" key="reset" htmlType="reset">
+              Limpar
+            </Button>
+            <Button form="form-filter" key="submit" type="primary" htmlType="submit" loading={loading}>
+              Aplicar
+            </Button>
+          </Space>
         </div>
       }
     >

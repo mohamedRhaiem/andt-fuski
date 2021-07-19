@@ -6,6 +6,8 @@ import { find } from "lodash";
 import moment from "moment";
 import CustomTag from "./components/CustomTag";
 
+import styles from './index.less'; 
+
 interface FilterTagsProps {
   setVisible: (value: boolean) => void;
   filter: Store;
@@ -67,8 +69,8 @@ const FilterTags: React.FC<FilterTagsProps> = (props) => {
     <>
       <Row>
         <Col span={24}>
-          <div className='filter-tags-panel'>
-            <Button type="text" icon={<FilterOutlined style={{color: '#2C65D6'}} />} loading={loading} onClick={onOpen} size="large" />
+          <div className={styles.filterTagsPanel}>
+            <Button type="text" icon={<FilterOutlined className={styles.filterTagsIcon} />} loading={loading} onClick={onOpen} size="large" />
             {buildChildren()}
           </div>
         </Col>
