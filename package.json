@@ -27,7 +27,7 @@
   "scripts": {
     "storybook": "start-storybook -p 6006 --no-manager-cache",
     "build-storybook": "build-storybook",
-    "build": "rimraf dist && cross-env NODE_ENV=production cross-env BABEL_ENV=production rollup -c",
+    "build": "rimraf dist && NODE_ENV=production  BABEL_ENV=production rollup -c",
     "lint-staged": "lint-staged",
     "lint-staged:js": "eslint --ext .js,.jsx,.ts,.tsx ",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx --quiet",
@@ -66,7 +66,6 @@
     "antd": "^4.9.1",
     "babel-loader": "^8.2.2",
     "babel-preset-react-app": "^10.0.0",
-    "cross-env": "^7.0.3",
     "eslint": "^7.22.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-formatter-pretty": "^4.0.0",
