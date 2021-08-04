@@ -8,61 +8,708 @@
 
 
 // VARIÁVEIS GERAIS
-
-@fuski-font-page-title: 900 1.6rem/1'Lato', sans-serif;
-/* Título da página carregada */
 @fuski-font-panel-title: 700 1.4rem/1 'Lato', sans-serif;
-/* Título dos painéis modais e drawers */
-@fuski-font-panel-subtitle: 900 1.15rem/1 'Lato', sans-serif;
-/* Nome de abas e título secundário de tela, modais e drawers  */
-
 @fuski-font-label: 900 .9rem/1 'Lato', sans-serif;
-/* Para todos os labels do sistema */
-@fuski-font-component: 400 1rem/1.2 'Lato', sans-serif;
-/* Para todos os componentes de input e navegação */
-@fuski-font-button: 700 1.1rem/1 'Lato', sans-serif;
-/* Para todos os botões */
 @fuski-font-table-regular: 400 .9rem/1.2 'Lato', sans-serif;
-/* Para o texto geral da tabela */
 @fuski-font-table-featured: 900 .9rem/1.2 'Lato', sans-serif;
-/* Para o texto geral da tabela */
 @fuski-font-table-secondary: 400 .80rem/1.2 'Lato', sans-serif;
-/* Para o texto geral da tabela */
-
 @fuski-font-text-condensed: -0.4px;
 
-
-@fuski-color-primary: #2c65d6;
-
-@fuski-color-app-background: #F5F6FA;
-@fuski-color-app-bar: #FFFFFF;
-@fuski-color-app-footer: #FFFFFF;
-@fuski-color-app-panel: #FFFFFF;
 @fuski-color-app-panel-secondary: #F6F6F6;
+@fuski-padding-component: 10px 10px;
+@fuski-border-radius-dropdown: 0px;
 
-@fuski-color-success: #60B106;
-@fuski-color-info: #2A80E4;
-@fuski-color-alert: #F5A623;
-@fuski-color-error: #A91E2F;
-
-@fuski-color-bkg-success: #e1f4ca;
-@fuski-color-bkg-info: #bddafc;
-@fuski-color-bkg-alert: #fcdca8;
-@fuski-color-bkg-error: #FFE1E5;
-
-@fuski-padding-component: 6px 10px;
-@fuski-border-component: 1px solid #d9d9d9;
-@fuski-border-radius-component: 5px;
-@fuski-height-component:40px;
-@fuski-border-button: 0px solid #d9d9d9;
-
-
-@fuski-color-panel: #ffffff;
 @fuski-shadow-panel: 0px 0px 5px rgba(0,0,0,.04);
-@fuski-border-panel: 0px solid rgba(0,0,0,.09);
-@fuski-border-radius-panel: 5px;
-
+@fuski-border-panel: 1px solid rgba(0,0,0,.03);
 @fuski-font-bold: 900;
+@fuski-font-regular: 400;
+
+// FORMATAÇÃO DO TEMA DO ANT-DESIGN
+
+// -------- Colors -----------
+@primary-color : #2c65d6;
+@info-color : #2A80E4;
+@success-color : #4CAF50;
+@processing-color : @primary-color;
+@error-color : #A91E2F;
+@highlight-color : @error-color;
+@warning-color : #F5A623;
+@normal-color : #d9d9d9;
+@white: #fff;
+@black: #000;
+
+// Base Scaffolding Variables
+// ---
+
+// Background color for `<body>`
+@body-background: #F5F6FA;
+// Base background color for most components
+@component-background: #fff;
+// Popover background color
+@popover-background: @component-background;
+@font-family: 'Lato', 'Roboto', 'Helvetica Neue', Arial,
+  'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+  'Noto Color Emoji';
+@code-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+@text-color: fade(@black, 85%);
+@text-color-secondary: fade(@black, 45%);
+@text-color-inverse: @white;
+@icon-color: inherit;
+@icon-color-hover: fade(@black, 75%);
+@heading-color: fade(@black, 85%);
+@text-color-dark: fade(@white, 85%);
+@text-color-secondary-dark: fade(@white, 65%);
+@text-selection-bg: @primary-color;
+@font-size-base: 13.5px;
+@font-size-lg: 1.25rem;
+@font-size-sm: 0.85rem;
+@line-height-base: 1.2;
+@border-radius-base: 5px;
+@border-radius-sm: @border-radius-base;
+
+// vertical paddings
+@padding-lg: 24px; // containers
+@padding-md: 16px; // small containers and buttons
+@padding-sm: 12px; // Form controls and items
+@padding-xs: 8px; // small items
+@padding-xss: 4px; // more small
+
+// vertical padding for all form controls
+@control-padding-horizontal: @padding-sm;
+@control-padding-horizontal-sm: @padding-xs;
+
+// vertical margins
+@margin-lg: 24px; // containers
+@margin-md: 16px; // small containers and buttons
+@margin-sm: 12px; // Form controls and items
+@margin-xs: 8px; // small items
+@margin-xss: 4px; // more small
+
+// height rules
+@height-base: 40px;
+@height-lg: 48px;
+@height-sm: 30px;
+
+
+// alert -----------------------------------------------------------
+
+@alert-success-border-color: transparent;
+@alert-success-bg-color: fade(@success-color, 10%);
+@alert-success-icon-color: @success-color;
+@alert-info-border-color: transparent;
+@alert-info-bg-color: fade(@info-color, 10%);
+@alert-info-icon-color: @info-color;
+@alert-warning-border-color: transparent;
+@alert-warning-bg-color: fade(@warning-color, 10%);
+@alert-warning-icon-color: @warning-color;
+@alert-error-border-color: transparent;
+@alert-error-bg-color: fade(@error-color, 10%);
+@alert-error-icon-color: @error-color;
+
+.ant-alert {
+    border-radius: @border-radius-base;
+    min-height: @height-base;
+    padding-top: @padding-sm;
+    padding-bottom: @padding-sm;
+    font-weight: @fuski-font-bold;
+}
+
+.ant-alert.ant-alert-no-icon {
+  padding-top: @padding-sm;
+  padding-bottom: @padding-sm;
+}
+
+.ant-alert-icon { 
+  top: 14px;
+}
+
+.ant-alert-with-description .ant-alert-message {
+  margin-bottom: 0px;
+}
+
+.ant-alert-with-description .ant-alert-description {
+  font-weight: @fuski-font-regular;
+  line-height: 1.3;
+}
+
+// auto-complete ---------------------------------------------------
+// Sem necessidade de alteração
+
+
+// button ----------------------------------------------------------
+
+@btn-font-weight: @fuski-font-bold;
+@btn-border-radius-base: @border-radius-base;
+@btn-border-radius-sm: @border-radius-base;
+@btn-border-width: @border-width-base;
+@btn-border-style: @border-style-base;
+@btn-shadow: transparent;
+@btn-primary-shadow: transparent;
+@btn-text-shadow: transparent;
+
+@btn-primary-color: @white;
+@btn-primary-bg: @primary-color;
+
+@btn-default-color: @text-color;
+@btn-default-bg: @component-background;
+@btn-default-border: @border-color-base;
+
+@btn-danger-color: @white;
+@btn-danger-bg: @error-color;
+@btn-danger-border: transparent;
+
+@btn-disable-color: @disabled-color;
+@btn-disable-bg: @disabled-bg;
+@btn-disable-border: transparent;
+
+@btn-default-ghost-color: @component-background;
+@btn-default-ghost-bg: transparent;
+@btn-default-ghost-border: transparent;
+
+@btn-font-size-lg: @font-size-base + 2px;
+@btn-font-size-sm: @font-size-base;
+@btn-padding-horizontal-base: @padding-md - 1px;
+@btn-padding-horizontal-lg: @btn-padding-horizontal-base;
+@btn-padding-horizontal-sm: @padding-xs - 1px;
+
+@btn-height-base: @height-base;
+@btn-height-lg: @height-lg;
+@btn-height-sm: @height-sm;
+
+@btn-line-height: @line-height-base;
+
+@btn-circle-size: @btn-height-base;
+@btn-circle-size-lg: @btn-height-lg;
+@btn-circle-size-sm: @btn-height-sm;
+
+@btn-square-size: @btn-height-base;
+@btn-square-size-lg: @btn-height-lg;
+@btn-square-size-sm: @btn-height-sm;
+@btn-square-only-icon-size: @font-size-base + 2px;
+@btn-square-only-icon-size-sm: @font-size-base;
+@btn-square-only-icon-size-lg:  @font-size-base + 2px;
+
+@btn-group-border: @primary-5;
+
+@btn-link-hover-bg: transparent;
+@btn-text-hover-bg: rgba(0, 0, 0, 0.018);
+
+
+// card ------------------------------------------------------------
+
+@card-head-color: @heading-color;
+@card-head-background: @component-background;
+@card-head-font-size: @font-size-lg;
+@card-head-font-size-sm: @font-size-base;
+@card-head-padding: 16px;
+@card-head-padding-sm: (@card-head-padding / 2);
+@card-head-height: 48px;
+@card-head-height-sm: 36px;
+@card-inner-head-padding: 12px;
+@card-padding-base: 16px;
+@card-padding-base-sm: (@card-padding-base / 2) + 4px;
+@card-actions-background: @component-background;
+@card-actions-li-margin: 12px 0;
+@card-skeleton-bg: #cfd8dc;
+@card-background: @component-background;
+@card-shadow: @fuski-shadow-panel;
+@card-radius: @border-radius-base + 4px;
+@card-head-tabs-margin-bottom: -17px;
+@card-head-extra-color: @text-color;
+
+.ant-card-head-title, .ant-card-meta-title {
+  font-weight: @fuski-font-bold;
+}
+
+.ant-card-bordered {
+  border: @fuski-border-panel;
+  box-shadow: @fuski-shadow-panel;
+}
+
+.ant-card-type-inner {
+  border: 1px solid #eeeeee;
+}
+
+// cascader --------------------------------------------------------
+
+.ant-cascader-menus {
+  border-radius: @fuski-border-radius-dropdown;
+}
+
+.ant-cascader-menu-item {
+  padding: @padding-xs @padding-md;
+}
+
+// checkbox --------------------------------------------------------
+
+@checkbox-size: 20px;
+@checkbox-color: @primary-color;
+@checkbox-check-color: #fff;
+@checkbox-check-bg: @checkbox-check-color;
+@checkbox-border-width: @border-width-base;
+@checkbox-group-item-margin-right: 6px;
+
+.ant-checkbox {
+  top: 0.25em;
+}
+
+// collapse --------------------------------------------------------
+
+@collapse-header-padding: @padding-sm @padding-md;
+@collapse-header-padding-extra: 40px;
+@collapse-header-bg: @background-color-light;
+@collapse-content-padding: @padding-md;
+@collapse-content-bg: @component-background;
+@collapse-header-arrow-left: 16px;
+
+.ant-collapse > .ant-collapse-item > .ant-collapse-header {
+  font-weight: @fuski-font-bold;
+  font-size: 1.1em;
+}
+
+.ant-collapse > .ant-collapse-item > .ant-collapse-header .ant-collapse-arrow {
+  font-weight: @fuski-font-bold;
+  font-size: .9em;
+}
+
+
+// date-picker -----------------------------------------------------
+// Sem necessidade de alterações
+
+.ant-picker-large {
+  padding: @padding-sm - 1px;
+}
+
+// drawer ----------------------------------------------------------
+
+@drawer-header-padding: @padding-md @padding-lg;
+@drawer-body-padding: @padding-lg;
+@drawer-bg: @component-background;
+@drawer-footer-padding-vertical: @padding-sm;
+@drawer-footer-padding-horizontal: @padding-lg;
+@drawer-header-close-size: 56px;
+
+.ant-drawer-title {
+    font: @fuski-font-panel-title;
+}
+
+.ant-drawer-close {
+    color: @primary-color;
+    font-weight: @fuski-font-bold;
+}
+
+
+// dropdown --------------------------------------------------------
+
+@dropdown-menu-bg: @component-background;
+@dropdown-vertical-padding: @padding-xs - 2px;
+@dropdown-edge-child-vertical-padding: @padding-xs - 2px;
+@dropdown-font-size: @font-size-base;
+@dropdown-line-height: 22px;
+
+.ant-dropdown-menu {
+  border-radius: @fuski-border-radius-dropdown;
+}
+
+.ant-dropdown-menu-item {
+  padding: @padding-xs @padding-md;
+}
+
+.ant-dropdown-menu-submenu-title {
+  padding-top: @padding-xs;
+  padding-bottom: @padding-xs;
+  padding-left: @padding-md;
+}
+
+// form ------------------------------------------------------------
+
+@label-required-color: @highlight-color;
+@label-color: @heading-color;
+@form-warning-input-bg: @input-bg;
+@form-item-margin-bottom: @margin-sm  + 2px;
+@form-item-trailing-colon: true;
+@form-vertical-label-padding: 0 0 4px;
+@form-vertical-label-margin: 0;
+@form-item-label-font-size: @font-size-base;
+@form-item-label-height: @input-height-base;
+@form-item-label-colon-margin-right: 8px;
+@form-item-label-colon-margin-left: 2px;
+@form-error-input-bg: @input-bg;
+
+.ant-form-item-label > label {
+    font: @fuski-font-label; 
+}
+
+.ant-form-item-explain, .ant-form-item-extra {
+  margin-top: 2px;
+  margin-bottom: @margin-sm + 2px;
+}
+
+.ant-form-item-has-feedback .ant-picker {
+  padding-right: 32px;
+}
+
+
+// grid ------------------------------------------------------------
+
+// smallest break point is @screen-md
+@screen-xs: 480px;
+@screen-xs-min: @screen-xs;
+// 👆 Extra small screen / phone
+
+// 👇 Small screen / tablet
+@screen-sm: 576px;
+@screen-sm-min: @screen-sm;
+
+// Medium screen / desktop
+@screen-md: 768px;
+@screen-md-min: @screen-md;
+
+// Large screen / wide desktop
+@screen-lg: 992px;
+@screen-lg-min: @screen-lg;
+
+// Extra large screen / full hd
+@screen-xl: 1200px;
+@screen-xl-min: @screen-xl;
+
+// Extra extra large screen / large desktop
+@screen-xxl: 1600px;
+@screen-xxl-min: @screen-xxl;
+
+// Grid system
+@grid-columns: 24;
+
+
+// input -----------------------------------------------------------
+
+@input-height-base: @height-base;
+@input-height-lg: @height-lg;
+@input-height-sm: @height-sm;
+@input-padding-horizontal: @control-padding-horizontal - 1px;
+@input-padding-horizontal-base: @input-padding-horizontal;
+@input-padding-horizontal-sm: @control-padding-horizontal-sm - 1px;
+@input-padding-horizontal-lg: @input-padding-horizontal;
+@input-padding-vertical-base: max(
+  (round(((@input-height-base - @font-size-base * @line-height-base) / 2) * 10) / 10) -
+    @border-width-base,
+  3px
+);
+@input-padding-vertical-sm: max(
+  (round(((@input-height-sm - @font-size-base * @line-height-base) / 2) * 10) / 10) -
+    @border-width-base,
+  0
+);
+@input-padding-vertical-lg: @padding-sm + 1px;
+@input-placeholder-color: hsv(0, 0, 75%);
+@input-color: @text-color;
+@input-icon-color: @input-color;
+@input-border-color: @border-color-base;
+@input-bg: @component-background;
+@input-number-hover-border-color: @input-hover-border-color;
+@input-number-handler-active-bg: #f4f4f4;
+@input-number-handler-hover-bg: @primary-5;
+@input-number-handler-bg: @component-background;
+@input-number-handler-border-color: @border-color-base;
+@input-addon-bg: @background-color-light;
+@input-hover-border-color: @primary-5;
+@input-disabled-bg: @disabled-bg;
+@input-outline-offset: 0 0;
+@input-icon-hover-color: fade(@black, 85%);
+@input-disabled-color: @disabled-color;
+
+.ant-input-search-enter-button + .ant-input-group-addon .ant-input-search-button, 
+.ant-input-search-enter-button input + .ant-input-group-addon .ant-input-search-button {
+  background-color: #EEEEEE;
+  border-color: @border-color-base;
+  color: @text-color;
+}
+
+.ant-input-search-enter-button + .ant-input-group-addon .ant-input-search-button:hover, 
+.ant-input-search-enter-button input + .ant-input-group-addon .ant-input-search-button:hover {
+  background-color: #dddddd;
+}
+
+.ant-input-group-addon {
+  background-color: #EEEEEE;
+}
+
+// input-number ----------------------------------------------------
+// Não precisa de ajustes
+
+// modal -----------------------------------------------------------
+
+.ant-modal-title {
+    font: @fuski-font-panel-title;
+}
+  
+.ant-modal-close-x {
+    color: @primary-color;
+    font-weight: @fuski-font-bold;
+}
+
+.ant-modal-confirm-body .ant-modal-confirm-title {
+  font-weight: @fuski-font-bold;
+}
+
+// pagination ------------------------------------------------------
+
+@pagination-item-bg: @component-background;
+@pagination-item-size: @height-base - 6px;
+@pagination-item-size-sm: @height-base - 6px;
+@pagination-font-family: @font-family;
+@pagination-font-weight-active: 500;
+@pagination-item-bg-active: @component-background;
+@pagination-item-link-bg: @component-background;
+@pagination-item-disabled-color-active: @disabled-color;
+@pagination-item-input-bg: @component-background;
+@pagination-mini-options-size-changer-top: 0px;
+
+.ant-pagination {
+    font: @fuski-font-table-regular;
+}
+
+.ant-pagination-options .ant-select-single:not(.ant-select-customize-input) .ant-select-selector,
+.ant-pagination-options-quick-jumper input,
+.ant-pagination-options-quick-jumper {
+  height: @height-base - 6px;
+}
+
+.ant-pagination .ant-select-single .ant-select-selector .ant-select-selection-item {
+  line-height: 30px;
+}
+
+.ant-table-pagination.ant-pagination {
+  margin: 10px 10px;
+}
+
+// radio -----------------------------------------------------------
+
+@radio-size: 20px;
+@radio-top: 0.25em;
+@radio-border-width: 1px;
+@radio-dot-size: @radio-size - 8px;
+@radio-dot-color: @primary-color;
+@radio-dot-disabled-color: fade(@black, 20%);
+@radio-solid-checked-color: @component-background;
+
+.ant-radio-button-wrapper.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+  background-color: fade(@primary-color, 10%);
+  color: @primary-color;
+}
+
+
+// select ----------------------------------------------------------
+
+@select-border-color: @border-color-base;
+@select-item-selected-color: @text-color;
+@select-item-selected-font-weight: 900;
+@select-dropdown-bg: @component-background;
+@select-item-selected-bg: @primary-1;
+@select-item-active-bg: @item-hover-bg;
+@select-dropdown-vertical-padding: @dropdown-vertical-padding;
+@select-dropdown-font-size: @dropdown-font-size;
+@select-dropdown-line-height: @dropdown-line-height;
+@select-dropdown-height: @height-base;
+@select-background: @component-background;
+@select-clear-background: @select-background;
+@select-selection-item-bg: @background-color-base;
+@select-selection-item-border-color: @border-color-split;
+@select-single-item-height-lg: 40px;
+@select-multiple-item-height: @input-height-base - @input-padding-vertical-base * 2; // Normal 24px
+@select-multiple-item-height-lg: 32px;
+@select-multiple-item-spacing-half: ceil((@input-padding-vertical-base / 2));
+@select-multiple-disabled-background: @input-disabled-bg;
+@select-multiple-item-disabled-color: #bfbfbf;
+@select-multiple-item-disabled-border-color: @select-border-color;
+
+.ant-select-dropdown {
+  border-radius: @fuski-border-radius-dropdown;
+}
+
+.ant-select-dropdown-menu-item {
+  padding: @padding-xs @padding-md;
+}
+
+.ant-select-multiple .ant-select-selection-item {
+  background-color: @primary-color;
+  color: @white;
+  font-weight: 700;
+  font-size: .95rem;
+  border-radius: 30px !important;
+  padding: 0px 10px;
+  margin: 0 1px;
+  height: @height-base - 10px;
+  line-height: @height-base - 12px;
+}
+
+.ant-select-multiple.ant-select-lg .ant-select-selection-item {
+  height: @height-lg - 12px;
+  line-height: @height-lg - 14px;
+  padding: 0px 14px;
+}
+.ant-select-multiple.ant-select-sm .ant-select-selection-item {
+  height: @height-sm - 10px;
+  line-height: @height-sm - 12px;
+}
+
+.ant-select-multiple .ant-select-selection-item-remove {
+  color: @white;
+}
+
+
+// switch ----------------------------------------------------------
+
+@switch-height: 24px;
+@switch-sm-height: 18px;
+@switch-min-width: 46px;
+@switch-sm-min-width: 34px;
+@switch-disabled-opacity: 0.4;
+@switch-color: @primary-color;
+@switch-bg: @component-background;
+@switch-shadow-color: fade(#00230b, 20%);
+@switch-padding: 2px;
+@switch-inner-margin-min: ceil(@switch-height * 0.3);
+@switch-inner-margin-max: ceil(@switch-height * 1.1);
+@switch-sm-inner-margin-min: ceil(@switch-sm-height * 0.3);
+@switch-sm-inner-margin-max: ceil(@switch-sm-height * 1.1);
+
+
+// table -----------------------------------------------------------
+
+@table-bg: @component-background;
+@table-header-bg: @background-color-light;
+@table-header-color: @heading-color;
+@table-header-sort-bg: @background-color-base;
+@table-body-sort-bg: #fafafa;
+@table-row-hover-bg: @background-color-light;
+@table-selected-row-color: inherit;
+@table-selected-row-bg: @primary-1;
+@table-body-selected-sort-bg: @table-selected-row-bg;
+@table-selected-row-hover-bg: darken(@table-selected-row-bg, 2%);
+@table-expanded-row-bg: #fbfbfb;
+@table-padding-vertical: 9px;
+@table-padding-horizontal: 9px;
+@table-padding-vertical-md: (@table-padding-vertical * 3 / 4);
+@table-padding-horizontal-md: (@table-padding-horizontal / 2);
+@table-padding-vertical-sm: (@table-padding-vertical / 2);
+@table-padding-horizontal-sm: (@table-padding-horizontal / 2);
+@table-border-color: @border-color-split;
+@table-border-radius-base: @border-radius-base;
+@table-footer-bg: @background-color-light;
+@table-footer-color: @heading-color;
+@table-header-bg-sm: @table-header-bg;
+
+.ant-table, .ant-table.ant-table-middle, .ant-table.ant-table-small {
+    font: @fuski-font-table-regular; 
+    border-top: 4px solid @white;
+    border-bottom: 1px solid @white;
+}
+ 
+.ant-table-thead > tr > th {
+    font: @fuski-font-label; 
+}
+
+.ant-table-row-expand-icon {
+  width: 19px;
+  height: 19px;
+  line-height: 20px;
+  transform: scale(1);
+}
+
+.ant-table-row-expand-icon::before {
+  top: 8px;
+  right: 4px;
+  left: 4px;
+  height: 1px;
+}
+
+.ant-table-row-expand-icon::after {
+  top: 5px;
+  bottom: 5px;
+  left: 8px;
+  width: 1px;
+}
+
+.ant-table-row-indent + .ant-table-row-expand-icon {
+  margin-top: -1px;
+}
+
+.ant-table-selection-extra {
+  top: 7px;
+}
+
+// tabs -----------------------------------------------------------
+
+@tabs-card-head-background: @background-color-light;
+@tabs-card-height: 40px;
+@tabs-card-active-color: @primary-color;
+@tabs-card-horizontal-padding: (
+    (@tabs-card-height - floor(@font-size-base * @line-height-base)) / 2
+  ) - @border-width-base @padding-md;
+@tabs-card-horizontal-padding-sm: 6px @padding-md;
+@tabs-card-horizontal-padding-lg: 7px @padding-md 6px;
+@tabs-title-font-size: @font-size-lg;
+@tabs-title-font-size-lg: @font-size-lg;
+@tabs-title-font-size-sm: @font-size-base;
+@tabs-ink-bar-color: @primary-color;
+@tabs-bar-margin: 0 0 @margin-md 0;
+@tabs-horizontal-gutter: 32px;
+@tabs-horizontal-margin: 0 @tabs-horizontal-gutter 0 0;
+@tabs-horizontal-margin-rtl: 0 0 0 @tabs-horizontal-gutter;
+@tabs-horizontal-padding: @padding-sm 0;
+@tabs-horizontal-padding-lg: @padding-md 0;
+@tabs-horizontal-padding-sm: @padding-xs 0;
+@tabs-vertical-padding: @padding-xs @padding-lg;
+@tabs-vertical-margin: @margin-md 0 0 0;
+@tabs-scrolling-size: 32px;
+@tabs-highlight-color: @primary-color;
+@tabs-hover-color: @black;
+@tabs-active-color: @primary-color;
+@tabs-card-gutter: 4px;
+@tabs-card-tab-active-border-top: 2px solid transparent;
+
+.ant-tabs-nav .ant-tabs-tab {
+  font-weight: @fuski-font-bold;
+}
+
+.ant-tabs-ink-bar {
+  height: 3px;
+}
+
+
+// tag -------------------------------------------------------------
+
+@tag-default-bg: @primary-color;
+@tag-default-color: @white;
+@tag-font-size: @font-size-sm;
+@tag-line-height: 1.2;
+
+.ant-tag {
+    font-weight: 700;
+    font-size: .95rem;
+    border-radius: 30px !important;
+    padding: 6px 10px;
+    margin: 0 2px;
+}
+.ant-tag .anticon-close,
+.ant-tag .anticon-close:hover {
+  color: @white;
+  font-weight: 700;
+}
+
+.ant-tag-checkable {
+  color: @black;
+}
+
+.ant-tag-checkable-checked {
+  color: @white;
+}
+
+// time-picker -----------------------------------------------------
+// Sem necessidade de ajuste
+
+
 
 
 // FORMATAÇÃO ANT DESIGN
@@ -70,7 +717,7 @@ html,
 body,
 #root {
   height: 100%;
-  background-color: @fuski-color-app-background;
+  background-color: @body-background;
 
   @media (max-width: @screen-xxl) {
     font: @fuski-font-base-screen-general;
@@ -127,264 +774,3 @@ ol {
     min-height: 100vh;
   }
 }
-
-
-
-
-// FORMATAÇÃO DE COMPONENTES
-
-//FuskiTable
-.ant-table {
-  font: @fuski-font-table-regular; 
-}
-
-.ant-table-thead > tr > th {
-  padding: 9px;
-  font: @fuski-font-label; 
-}
-.ant-table-tbody > tr > td {
-  padding: 9px;
-}
-
-.ant-pagination-simple {
-  font: @fuski-font-table-regular;
-}
-
-.ant-pagination-simple .ant-pagination-simple-pager {
-  height: 32px;
-}
-
-.ant-pagination-simple .ant-pagination-simple-pager input {
-  border-radius: @fuski-border-radius-component;
-}
-
-.ant-pagination-simple .ant-pagination-prev,
-.ant-pagination-simple .ant-pagination-next {
-  height: 32px;
-  line-height: 32px;
-}
-
-.ant-table-pagination.ant-pagination {
-  margin: 10px 10px 7px;
-}
-
-.ant-pagination-item a {
-  padding: 4px 6px;
-}
-
-.ant-pagination-item, 
-.ant-pagination-prev, 
-.ant-pagination-next, 
-.ant-pagination-item-link,
-.ant-pagination-disabled .ant-pagination-item-link, 
-.ant-pagination-disabled:hover .ant-pagination-item-link,
-.ant-pagination-prev .ant-pagination-item-link,
-.ant-pagination-prev:hover .ant-pagination-item-link,
-.ant-pagination-next .ant-pagination-item-link,
-.ant-pagination-next:hover .ant-pagination-item-link {
-  height: @fuski-height-component;
-  border-radius: @fuski-border-radius-component;
-}
-
-//FuskiFilter
-.ant-tag {
-  border-radius: 3px !important;
-}
-
-.ant-tag.filter-tag {
-  background-color: @fuski-color-primary;
-  color: #fff;
-  font-weight: 700;
-  border-radius: 30px !important;
-  padding: 3px 10px;
-  margin: 0 2px;
-}
-
-.ant-drawer-title {
-  font: @fuski-font-panel-title;
-}
-.ant-modal-title {
-  font: @fuski-font-panel-title;
-}
-
-.ant-form-vertical .ant-form-item-label {
-  padding: 0 0 2px;
-}
-.ant-form-item-label > label {
-  font: @fuski-font-label; 
-}
-
-.ant-picker, 
-.ant-input, 
-.ant-input-number,
-.ant-select:not(.ant-select-customize-input) .ant-select-selector {
-  font: @fuski-font-component;
-  padding: @fuski-padding-component;
-  border:@fuski-border-component;
-  border-radius: @fuski-border-radius-component;
-  height: @fuski-height-component;
-  width: 100%;
-}
-
-.ant-btn {
-  font: @fuski-font-button;
-  height: @fuski-height-component;
-  border-radius: @fuski-border-radius-component;
-  border: @fuski-border-button;
-  color: @fuski-color-primary;
-}
-
-.ant-btn-primary {
-  background-color: @fuski-color-primary;
-  color: #ffffff;
-}
-
-.ant-drawer-close {
-  color: @fuski-color-primary;
-  font-weight: 900;
-}
-
-.ant-drawer-footer  {
-  padding: 12px 24px;
-}
-
-.ant-drawer-header {
-  padding: 16px 24px;
-}
-
-.ant-form-item {
-  margin-bottom: 16px;
-}
-
-.ant-modal-close-x {
-  color: @fuski-color-primary;
-  font-weight: 900;
-}
-
-// FORMATAÇÃO ANTIGA
-/*
-// APP BAR
-.ant-pro-top-nav-header {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-.ant-pro-top-nav-header-logo h1 {
-  margin: 0 10px 0 6px;
-  color: @app-color-primary !important;
-  font-weight: 700;
-  font-size: 1.2em;
-  letter-spacing: -0.5px;
-}
-.ant-pro-top-nav-header-logo img {
-  height: 24px;
-}
-
-// PAGE HEADER
-.ant-breadcrumb {
-  font-size: 0.9em;
-}
-.ant-breadcrumb + .ant-page-header-heading {
-  margin-top: 0;
-  padding-bottom: 24px;
-}
-.ant-breadcrumb a,
-.ant-breadcrumb-link {
-  color: @app-color-primary;
-  text-transform: lowercase;
-}
-.ant-breadcrumb-separator {
-  margin: 0 3px;
-}
-
-.ant-page-header-heading-left,
-.ant-page-header-heading-extra {
-  margin: 0;
-}
-
-.ant-page-header-back {
-  margin-right: 6px;
-}
-
-.ant-page-header-heading-title {
-  text-transform: uppercase;
-}
-
-.ant-pro-page-header-wrap-content .ant-picker,
-.ant-pro-page-header-wrap-content .ant-select-selector {
-  background-color: transparent !important;
-}
-
-.ant-pro-page-header-wrap-content .ant-form-item {
-  margin-right: 8px !important;
-}
-
-
-
-//MODAL E DRAWER
-.ant-modal-title,
-.ant-drawer-title {
-  font-weight: 700 !important;
-  font-size: 1.4em !important;
-}
-.ant-modal-header,
-.ant-modal-content,
-.ant-modal-footer {
-  border-radius: 0 !important;
-}
-.ant-modal-close-x .anticon,
-.ant-drawer-close .anticon {
-  color: @app-color-primary;
-}
-
-//FORM
-.ant-form-item-label {
-  padding-bottom: 4px !important;
-}
-.ant-form-item-label label {
-  font-weight: 700 !important;
-  font-size: 0.95em !important;
-}
-
-
-//DATA TABLE
-.ant-table-thead span,
-.ant-table-thead th.ant-table-cell {
-  font-weight: 700 !important;
-  font-size: 0.95em !important;
-  line-height: 1;
-}
-.ant-table-pagination.ant-pagination {
-  margin: 15px 10px!important;
-}
-.ant-table-tbody > tr > td {
-  border-bottom: 1px solid #ddd !important;
-}
-
-//COMPONENTES
-.ant-tag {
-  border-radius: 3px !important;
-}
-
-.ant-tag.filter-tag {
-  background-color: #2C65D6;
-  color: #fff;
-  font-weight: 700;
-  border-radius: 30px !important;
-  padding: 3px 6px;
-  margin: 0 2px;
-}
-
-.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
-  font-weight: 700 !important;
-}
-
-.ant-anchor-wrapper {
-  background-color: transparent !important;
-  border-width: 0 !important;
-}
-
-.ant-anchor {
-  padding-left: 0 !important;
-  background-color: transparent !important;
-}
-
-*/
