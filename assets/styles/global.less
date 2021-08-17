@@ -136,6 +136,17 @@
 // Sem necessidade de alteração
 
 
+// breadcrumb ---------------------------------------------------
+
+@breadcrumb-base-color: @black;
+@breadcrumb-last-item-color: @black;
+@breadcrumb-font-size: @font-size-sm;
+@breadcrumb-icon-font-size: @font-size-sm;
+@breadcrumb-link-color: @primary-color;
+@breadcrumb-link-color-hover: @black;
+@breadcrumb-separator-color: @text-color-secondary;
+@breadcrumb-separator-margin: 0 @padding-xs;
+
 // button ----------------------------------------------------------
 
 @btn-font-weight: @fuski-font-bold;
@@ -287,7 +298,7 @@
 @drawer-bg: @component-background;
 @drawer-footer-padding-vertical: @padding-sm;
 @drawer-footer-padding-horizontal: @padding-lg;
-@drawer-header-close-size: 56px;
+@drawer-header-close-size: 40px;
 
 .ant-drawer-title {
     font: @fuski-font-panel-title;
@@ -437,6 +448,51 @@
 // input-number ----------------------------------------------------
 // Não precisa de ajustes
 
+
+// List ----------------------------------------------------
+
+.ant-list-bordered .ant-list-header { 
+  font-weight: 900;
+  background-color: #eeeeee;
+}
+
+// Menu ----------------------------------------------------
+
+@menu-inline-toplevel-item-height: @height-base;
+@menu-item-height: @height-base;
+@menu-item-group-height: @line-height-base;
+@menu-collapsed-width: 80px;
+@menu-bg: @component-background;
+@menu-popup-bg: @component-background;
+@menu-item-color: @text-color;
+@menu-inline-submenu-bg: @background-color-light;
+@menu-highlight-color: @primary-color;
+@menu-highlight-danger-color: @error-color;
+@menu-item-active-bg: fade(@primary-color, 10%);
+@menu-item-active-danger-bg: @red-1;
+@menu-item-active-border-width: 3px;
+@menu-item-group-title-color: @text-color-secondary;
+@menu-item-vertical-margin: 4px;
+@menu-item-font-size: 1rem;
+@menu-item-boundary-margin: 8px;
+@menu-item-padding-horizontal: 20px;
+@menu-item-padding: 0 @menu-item-padding-horizontal;
+@menu-horizontal-line-height: 1.2;
+@menu-icon-margin-right: 10px;
+@menu-icon-size: 1.2rem;
+@menu-icon-size-lg: @font-size-lg;
+@menu-item-group-title-font-size: @menu-item-font-size;
+
+.ant-menu-submenu-title,
+.ant-menu-root > .ant-menu-item {
+  font-weight: @fuski-font-bold;
+  font-size: 1.15rem;
+}
+
+.ant-menu-item-group-title {
+  font-weight: @fuski-font-bold;
+}
+
 // modal -----------------------------------------------------------
 
 .ant-modal-title {
@@ -450,6 +506,56 @@
 
 .ant-modal-confirm-body .ant-modal-confirm-title {
   font-weight: @fuski-font-bold;
+}
+
+.ant-modal-confirm-info .ant-btn.ant-btn-primary {
+  background-color: @info-color;
+  border: none;
+}
+
+.ant-modal-confirm-success .ant-btn.ant-btn-primary {
+  background-color: @success-color;
+  border: none;
+}
+
+.ant-modal-confirm-error .ant-btn.ant-btn-primary {
+  background-color: @error-color;
+  border: none;
+}
+
+.ant-modal-confirm-warning .ant-btn.ant-btn-primary {
+  background-color: @warning-color;
+  border: none;
+}
+
+// PageHeader ------------------------------------------------------
+
+@page-header-padding: 0 @padding-lg;
+@page-header-padding-vertical: @padding-md;
+@page-header-padding-breadcrumb: @padding-md;
+@page-header-content-padding-vertical: 0;
+@page-header-back-color: #000;
+@page-header-ghost-bg: inherit;
+@page-header-heading-title: 1.7rem;
+@page-header-heading-sub-title: 1.1rem;
+@page-header-tabs-tab-font-size: 16px;
+
+.ant-breadcrumb + .ant-page-header-heading {
+  margin-top: 0;
+}
+
+.ant-page-header-heading-left,
+.ant-page-header-heading-extra {
+  margin-top: 0px;
+}
+
+.ant-page-header-heading-title {
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.site-page-header-ghost-wrapper .ant-page-header {
+  padding: @padding-lg;
 }
 
 // pagination ------------------------------------------------------
@@ -481,6 +587,13 @@
 
 .ant-table-pagination.ant-pagination {
   margin: 10px 10px;
+}
+
+.ant-pagination-total-text {
+  background-color: fade(@black, 5%);
+  padding: 0 @padding-sm;
+  border-radius: @border-radius-base;
+  font-weight: @fuski-font-bold;
 }
 
 // radio -----------------------------------------------------------
@@ -644,17 +757,15 @@
 @tabs-card-head-background: @background-color-light;
 @tabs-card-height: 40px;
 @tabs-card-active-color: @primary-color;
-@tabs-card-horizontal-padding: (
-    (@tabs-card-height - floor(@font-size-base * @line-height-base)) / 2
-  ) - @border-width-base @padding-md;
+@tabs-card-horizontal-padding: 12px @padding-md;
 @tabs-card-horizontal-padding-sm: 6px @padding-md;
-@tabs-card-horizontal-padding-lg: 7px @padding-md 6px;
+@tabs-card-horizontal-padding-lg: 18px @padding-md+4px;
 @tabs-title-font-size: @font-size-lg;
 @tabs-title-font-size-lg: @font-size-lg;
 @tabs-title-font-size-sm: @font-size-base;
 @tabs-ink-bar-color: @primary-color;
 @tabs-bar-margin: 0 0 @margin-md 0;
-@tabs-horizontal-gutter: 32px;
+@tabs-horizontal-gutter: 24px;
 @tabs-horizontal-margin: 0 @tabs-horizontal-gutter 0 0;
 @tabs-horizontal-margin-rtl: 0 0 0 @tabs-horizontal-gutter;
 @tabs-horizontal-padding: @padding-sm 0;
@@ -666,17 +777,26 @@
 @tabs-highlight-color: @primary-color;
 @tabs-hover-color: @black;
 @tabs-active-color: @primary-color;
-@tabs-card-gutter: 4px;
+@tabs-card-gutter: 5px;
 @tabs-card-tab-active-border-top: 2px solid transparent;
 
 .ant-tabs-nav .ant-tabs-tab {
   font-weight: @fuski-font-bold;
 }
 
-.ant-tabs-ink-bar {
+.ant-tabs-ink-bar,
+.ant-tabs-top > .ant-tabs-nav .ant-tabs-ink-bar,
+.ant-tabs-bottom > .ant-tabs-nav .ant-tabs-ink-bar {
   height: 3px;
 }
+.ant-tabs-left > .ant-tabs-nav .ant-tabs-ink-bar,
+.ant-tabs-right > .ant-tabs-nav .ant-tabs-ink-bar {
+  width: 3px;
+}
 
+.ant-tabs-tab + .ant-tabs-tab {
+  margin: 0 0 0 @tabs-horizontal-gutter;
+}
 
 // tag -------------------------------------------------------------
 
@@ -692,6 +812,7 @@
     padding: 6px 10px;
     margin: 0 2px;
 }
+
 .ant-tag .anticon-close,
 .ant-tag .anticon-close:hover {
   color: @white;
@@ -710,6 +831,18 @@
 // Sem necessidade de ajuste
 
 
+// formatações gerais ----------------------------------------------
+
+.ant-layout-content {
+  padding: 0 40px;
+}
+
+.ant-picker,
+.ant-input,
+.ant-select,
+.ant-input-number {
+  width: 100%;
+}
 
 
 // FORMATAÇÃO ANT DESIGN
