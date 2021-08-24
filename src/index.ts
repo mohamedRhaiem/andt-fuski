@@ -17,6 +17,8 @@ export * from "./components/form/fields/FuskiFieldSelect";
 
 export * from "./components/form/fields/FuskiFieldSelectApi";
 
+export * from "./components/form/fields/FuskiFieldSelectApiStream";
+
 export * from "./components/form/utils/field";
 
 export * from "./components/form/utils/form";
