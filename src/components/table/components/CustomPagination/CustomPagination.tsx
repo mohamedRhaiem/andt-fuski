@@ -3,7 +3,7 @@ import { Button, Dropdown, Menu, Pagination } from 'antd';
 import { CustomPaginationInterface } from 'components/table/utils/configTable';
 import React from 'react';
 
-import styles from './index.less';
+import styles from './index.module.less';
 
 const defaultPageSizes = [10, 20, 30, 50, 100];
 

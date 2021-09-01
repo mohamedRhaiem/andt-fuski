@@ -1,7 +1,7 @@
 import React from "react";
 import { Space } from "antd";
 import { CalendarOutlined } from "@ant-design/icons";
-import styles from './index.less';
+import styles from './index.module.less';
 
 export interface DateProps {
   value: string;
