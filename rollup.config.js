@@ -23,7 +23,7 @@ export default {
     analyze(),
     postcss({
       extract: false,
-      modules: true,
+      autoModules: true,
       use: ['less'],
     }),
     peerDepsExternal(),

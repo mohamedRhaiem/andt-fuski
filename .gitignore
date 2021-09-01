@@ -3,3 +3,5 @@ storybook-static
 dist
 yarn-error.log
 .vscode
+yarn.lock
+package-json.lock

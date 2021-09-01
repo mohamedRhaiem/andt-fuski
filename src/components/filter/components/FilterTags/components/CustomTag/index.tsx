@@ -1,7 +1,7 @@
 import { CloseOutlined } from '@ant-design/icons';
 import { Tag } from 'antd';
 import React from 'react';
-import styles from './index.less';
+import styles from './index.module.less';
 
 interface TagProps {
   itemKey: string;

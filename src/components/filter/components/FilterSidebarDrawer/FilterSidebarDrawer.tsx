@@ -1,6 +1,6 @@
 import { Button, Drawer, Space } from "antd";
 import React, { ReactNode } from "react";
-import styles from './index.less';
+import styles from './index.module.less';
 
 interface FilterSidebarProps {
   setVisible: (value: boolean) => void;

@@ -6,7 +6,7 @@ import { find } from "lodash";
 import moment from "moment";
 import CustomTag from "./components/CustomTag";
 
-import styles from './index.less'; 
+import styles from './index.module.less'; 
 
 interface FilterTagsProps {
   setVisible: (value: boolean) => void;
