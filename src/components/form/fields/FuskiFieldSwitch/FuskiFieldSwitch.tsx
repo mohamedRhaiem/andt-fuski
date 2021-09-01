@@ -6,11 +6,12 @@ import { FieldConfigForm } from "../../utils/field";
 const FuskiFieldSwitch: React.FunctionComponent<FieldConfigForm> = ({
   name,
   required,
-  label
+  label,
+  defaultChecked
 }: FieldConfigForm) => {
   return (
     <Form.Item name={name} rules={[{ required }]} label={label}>
-      <Switch/>
+        <Switch defaultChecked={defaultChecked}/>
     </Form.Item>
   );
 };
