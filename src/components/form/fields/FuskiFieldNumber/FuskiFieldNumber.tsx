@@ -9,10 +9,12 @@ const FuskiFieldNumber: React.FunctionComponent<FieldConfigForm> = ({
   label,
   style,
   border,
+  disabled,
+  readOnly
 }: FieldConfigForm) => {
   return (
     <Form.Item name={name} rules={[{ required, type: 'number', min: 0, max: 99 }]} label={label}>
-      <InputNumber style={style} bordered={border} />
+      <InputNumber style={style} bordered={border} disabled={disabled} readOnly={readOnly}/>
     </Form.Item>
   );
 };

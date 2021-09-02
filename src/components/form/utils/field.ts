@@ -13,6 +13,8 @@ export interface FieldConfigForm {
   mode?: 'multiple' | 'tags';
   loading?: boolean;
   format?: string;
+  readOnly?: boolean;
+  inputReadOnly?: boolean;
   onChange?: () => {};
   onApiCall?: () => any;
   onApiCallStream?: (searchText: string, callback: (data: any) => void) => void;

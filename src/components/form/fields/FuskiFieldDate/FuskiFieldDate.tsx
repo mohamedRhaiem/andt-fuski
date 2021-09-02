@@ -10,10 +10,12 @@ const FuskiFieldDate: React.FunctionComponent<FieldConfigForm> = ({
   style,
   border,
   format,
+  disabled,
+  inputReadOnly
 }: FieldConfigForm) => {
   return (
     <Form.Item name={name} rules={[{ required: required }]} label={label}>
-      <DatePicker format={format} style={style} bordered={border} />
+      <DatePicker format={format} style={style} bordered={border} disabled={disabled} inputReadOnly={inputReadOnly}/>
     </Form.Item>
   );
 };
