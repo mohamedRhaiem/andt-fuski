@@ -9,6 +9,7 @@ const FuskiFieldTimeInputOnSave = ({
   style,
   border,
   label,
+  placeholder,
   onChange,
 }: FieldConfigForm) => {
   return (
@@ -19,6 +20,7 @@ const FuskiFieldTimeInputOnSave = ({
         onPressEnter={onChange}
         onBlur={onChange}
         bordered={border}
+        placeholder={placeholder}
       />
     </Form.Item>
   );
