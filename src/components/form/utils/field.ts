@@ -19,6 +19,8 @@ export interface FieldConfigForm {
   compact?: boolean;
   defaultChecked?: boolean;
   children?: ReactNode;
+  readOnly?: boolean;
+  inputReadOnly?: boolean;
   onChange?: () => {};
   onApiCall?: () => any;
   onApiCallStream?: (searchText: string, callback: (data: any) => void) => void;
