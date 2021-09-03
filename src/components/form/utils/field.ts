@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export interface FieldConfigForm {
   name: string | string[];
   label?: string;
@@ -13,6 +15,10 @@ export interface FieldConfigForm {
   mode?: 'multiple' | 'tags';
   loading?: boolean;
   format?: string;
+  size?: "small" | "large" | "default" | undefined;
+  compact?: boolean;
+  defaultChecked?: boolean;
+  children?: ReactNode;
   readOnly?: boolean;
   inputReadOnly?: boolean;
   onChange?: () => {};
