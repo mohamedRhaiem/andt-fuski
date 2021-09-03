@@ -19,7 +19,7 @@ const FuskiFieldRangeDate: React.FunctionComponent<RangeDateFieldConfigForm> = (
   border,
   disabled,
   placeholder
-}: FieldConfigForm) => {
+}) => {
   return (
     <Form.Item name={name} rules={[{ required }]} label={label}>
       <RangePicker style={style} bordered={border} disabled={disabled} placeholder={placeholder}/>
