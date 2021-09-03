@@ -7,6 +7,7 @@ import FuskiFieldRangeDate from "../fields/FuskiFieldRangeDate/FuskiFieldRangeDa
 import FuskiFieldSelect from "../fields/FuskiFieldSelect/FuskiFieldSelect";
 import FuskiFieldNumber from "../fields/FuskiFieldNumber/FuskiFieldNumber";
 import FuskiFieldSelectApi from "../fields/FuskiFieldSelectApi/FuskiFieldSelectApi";
+import FuskiFieldSelectApiStream from "../fields/FuskiFieldSelectApiStream/FuskiFieldSelectApiStream";
 import { FieldConfigForm } from "../utils/field";
 
 type fieldsListType = {
@@ -18,6 +19,7 @@ export const listFormFields:fieldsListType = {
   InputNumber: FuskiFieldNumber,
   Select: FuskiFieldSelect,
   SelectApi: FuskiFieldSelectApi,
+  SelectApiStream: FuskiFieldSelectApiStream,
   Date: FuskiFieldDate,
   DateTime: FuskiFieldDateTime,
   RangeDate: FuskiFieldRangeDate,

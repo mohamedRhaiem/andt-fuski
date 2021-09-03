@@ -3,7 +3,7 @@ import { Table } from "antd";
 import { ConfigTable, CustomPaginationInterface } from "../utils/configTable";
 import { CustomPagination } from "../components/CustomPagination";
 
-import styles from './index.less'
+import styles from './index.module.less'
 
 interface Props {
   data?: any[];

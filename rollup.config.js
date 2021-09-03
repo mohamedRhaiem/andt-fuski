@@ -22,8 +22,9 @@ export default {
   plugins: [
     analyze(),
     postcss({
-      plugins: [],
-      minimize: true,
+      extract: false,
+      autoModules: true,
+      use: ['less'],
     }),
     peerDepsExternal(),
     resolve(),
@@ -48,7 +49,6 @@ export default {
       ...pkg.babel,
       extensions: [...DEFAULT_EXTENSIONS, '.ts', '.tsx'],
       babelHelpers: 'runtime',
-    })
+    }),
   ],
-  
 };

@@ -21,4 +21,5 @@ export interface FieldConfigForm {
   children?: ReactNode;
   onChange?: () => {};
   onApiCall?: () => any;
+  onApiCallStream?: (searchText: string, callback: (data: any) => void) => void;
 }

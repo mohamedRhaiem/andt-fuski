@@ -9,10 +9,11 @@ const FuskiFieldInput: React.FunctionComponent<FieldConfigForm> = ({
   label,
   style,
   border,
+  placeholder
 }: FieldConfigForm) => {
   return (
     <Form.Item name={name} rules={[{ required }]} label={label}>
-      <Input style={style} bordered={border} />
+      <Input style={style} bordered={border} placeholder={placeholder}/>
     </Form.Item>
   );
 };

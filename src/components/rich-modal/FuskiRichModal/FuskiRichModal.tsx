@@ -2,7 +2,7 @@ import { Modal, Button, Space } from 'antd';
 import React from 'react';
 import Draggable from 'react-draggable';
 import { FuskiRichModalProps } from '../utils/richModalConfig';
-import styles from './index.less';
+import styles from './index.module.less';
 
 const FuskiRichModal: React.FC<FuskiRichModalProps> = (props) => {
   const { id,visible, onSubmit, hide, children, title, width, hideSubmit } = props;
