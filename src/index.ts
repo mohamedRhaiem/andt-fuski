@@ -27,6 +27,9 @@ export * from "./components/form/utils/form";
 
 export * from "./components/form/FuskiForm";
 
+//page-header components
+export * from "./components/page-header/FuskiPageHeader";
+
 // table components
 export * from "./components/table/columns/Group";
 
