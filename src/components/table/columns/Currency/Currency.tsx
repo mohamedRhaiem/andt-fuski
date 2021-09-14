@@ -1,11 +1,12 @@
 import React from "react";
+import styles from './index.module.less';
 
 export interface CurrencyProps {
   value: string;
 }
 
 const Currency: React.FC<CurrencyProps> = ({ value }: CurrencyProps) => (
-  <span style={{ textAlign: "left", fontWeight: 700 }}>{value}</span>
+  <span className={styles.tableCurrency}>{value}</span>
 );
 
 export default Currency;

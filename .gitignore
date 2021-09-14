@@ -1,3 +1,7 @@
 node_modules
 storybook-static
-build
+dist
+yarn-error.log
+.vscode
+yarn.lock
+package-json.lock

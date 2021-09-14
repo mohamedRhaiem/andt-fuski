@@ -12,9 +12,18 @@ const FuskiForm: React.FunctionComponent<FormConfig> = ({
   onValuesChange,
   layout,
   size,
+  form
 }: FormConfig) => {
-  const [form] = Form.useForm();
+  const [formDefault] = Form.useForm();
+  if (!form) {
+    form = formDefault;
+  }
+
   form.setFieldsValue(store);
+
+  const action = (values: any) => {
+    onAction(values);
+  }
 
   const buildForm = () => fieldsList.map((field, i) => buildField(field, i));
 
@@ -30,7 +39,7 @@ const FuskiForm: React.FunctionComponent<FormConfig> = ({
       form={form}
       layout={layout}
       size={size}
-      onFinish={onAction}
+      onFinish={action}
       onReset={onReset}
       onValuesChange={onValuesChange}
       hideRequiredMark

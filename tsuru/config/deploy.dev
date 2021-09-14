@@ -1,0 +1,6 @@
+# DEV
+type="app"
+app="ad-documentation-front-dev"
+strategy="app-deploy"
+files="."
+

@@ -30,7 +30,7 @@ export const Multiple = Template.bind({});
 Multiple.args = {
   ...Default.args,
   label: "Select Multiple",
-  style: { backgroundColor: "#09aaa3", minWidth: 120, maxWidth: 300 },
+  style: { minWidth: 120, maxWidth: 300 },
   border: true,
   mode: "multiple",
   loading: false,
@@ -40,6 +40,6 @@ export const Tags = Template.bind({});
 Tags.args = {
   ...Default.args,
   label: "Select Tags",
-  style: { backgroundColor: "#09aaa3", minWidth: 120, maxWidth: 300 },
+  style: { minWidth: 120, maxWidth: 300 },
   mode: "tags",
 };

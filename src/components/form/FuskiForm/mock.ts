@@ -3,14 +3,14 @@ import { FieldConfigForm } from "../utils/field";
 export const FieldsFilter = [
   {
     label: "Column 1",
-    key: "c1",
+    name: "c1",
     required: false,
     component: "Date",
   },
   {
     label: "Column 2",
     required: true,
-    key: "c2",
+    name: "c2",
     valueProp: "id",
     displayProp: "name",
     options: [
@@ -23,20 +23,26 @@ export const FieldsFilter = [
   },
   {
     label: "Column 3",
-    key: "c3",
+    name: "c3",
     required: false,
     component: "Input",
   },
   {
     label: "Column 4",
-    key: "c4",
+    name: "c4",
     required: false,
     component: "DateTime",
   },
   {
     label: "Column 5",
-    key: "c5",
+    name: "c5",
     required: false,
     component: "RangeDate",
+  },
+  {
+    label: "Input",
+    name: "input",
+    required: false,
+    component: "Input",
   },
 ] as FieldConfigForm[];

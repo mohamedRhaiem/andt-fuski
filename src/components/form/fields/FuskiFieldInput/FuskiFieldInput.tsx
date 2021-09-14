@@ -4,15 +4,17 @@ import { Input } from "antd";
 import { FieldConfigForm } from "../../utils/field";
 
 const FuskiFieldInput: React.FunctionComponent<FieldConfigForm> = ({
-  key,
+  name,
   required,
   label,
   style,
   border,
+  placeholder,
+  disabled
 }: FieldConfigForm) => {
   return (
-    <Form.Item name={key} rules={[{ required }]} label={label}>
-      <Input style={style} bordered={border} />
+    <Form.Item name={name} rules={[{ required }]} label={label}>
+      <Input style={style} bordered={border} placeholder={placeholder} disabled={disabled}/>
     </Form.Item>
   );
 };

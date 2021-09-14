@@ -4,21 +4,23 @@ import { Input } from "antd";
 import { FieldConfigForm } from "../../utils/field";
 
 const FuskiFieldTimeInputOnSave = ({
-  key,
+  name,
   required,
   style,
   border,
   label,
+  placeholder,
   onChange,
 }: FieldConfigForm) => {
   return (
-    <Form.Item label={label} style={style} name={key} rules={[{ required }]}>
+    <Form.Item label={label} style={style} name={name} rules={[{ required }]}>
       <Input
         type="time"
         step="1"
         onPressEnter={onChange}
         onBlur={onChange}
         bordered={border}
+        placeholder={placeholder}
       />
     </Form.Item>
   );
